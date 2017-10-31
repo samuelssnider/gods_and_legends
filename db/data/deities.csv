@@ -1,18 +1,63 @@
-name, tier, description, mythology, classification
-"Gaia", 0,, 
-Eros (Love),
-the Tartarus (the Abyss),
-Erebus,
-Uranus (the Sky),
-Coeus,
-Crius,
-Cronus,
-Hyperion,
-Iapetus,
-Oceanus, 
-Mnemosyne, 
-Phoebe, 
-Rhea, 
-Theia, 
-Themis, 
-Tethys
+name,tier,gender,description,mythology,classification
+"Achlys",0,1,"Death-mist, Misery and Sadness, preceded even Chaos",1,"Origin"
+"Chaos",0,3,"The first thing that came to be",1,"Origin"
+"Gaia",0,1,"Mother Earth",1,"Primordial"
+"Uranus",0,0,"Father Sky",1,"Post-Primordial"
+"Tartarus",0,0,"Section of the Underworld",1,"Primordial"
+"Nyx",0,1,"Primordial Goddess of the Night, being of exceptional power",1,"Primordial"
+"Aether",0,0,"Primordial God of Upper Air",1,"Primordial"
+"Hemera",0,1,"Primordial Goddess of the Day",1,"Primordial"
+"Eros",0,0,"God of sexual attraction",1,"Primordial"
+"Erebus",0,3,"Shadow",1,"Primordial"
+"Pontus",0,1,"Primordial God of the Sea",1,"Primordial"
+"Thalassa",0,1,"Primordially Goddess of the Sea",1,"Primordial"
+"Ananke",0,1,"Primordial Goddess of Inevitablility, Compulsion, and Necessity",1,"Primordial"
+"Aion",0,0,"God of Eternal Time and the Zodiac",1,"Primordial"
+"Chronos",0,0,"Personification of Time",1,"Primordial"
+"Coeus",1,0,"Titan God of intellect",1, "Titan"
+"Crius",1,0,"Titan father of Perses",1, "Titan"
+"Cronus",1,0,"Leader of Titans, Father of Zeus",1,"Titan"
+"Hyperion",1,0,"Father of Helios, Titan God of Watchfulness, Wisdom, and Light",1, "Titan"
+"Iapetus",1,0, "Titan God of mortality",1,"Titan"
+"Oceanus",1,0,"Titan God of the Sea",1,"Titan"
+"Mnemosyne",1,1,"Titaness Goddess of memory",1,"Titaness"
+"Phoebe",1,1,"Titaness Goddess of the moon, mother of Leto and Asteria",1,"Titaness"
+"Rhea",1,1,"Mother of the Gods, wife of Cronus",1,"Titaness"
+"Theia",1,1,"Titaness Goddess of the Sun, mother Helios, Selene, and Eos",1,"Titaness"
+"Themis",1,1,"Titaness Goddess of good counsel" ,1,"Titaness"
+"Tethys"1,1,"Titaness Goddess of the Ocean",1,"Titaness"
+"Thanatos",1,0,"God of Death",1,"God"
+"Zeus",1,0,"Leader of the Olympians, Overthrower of the Titans, God of Sky, Storms,Law and Justice",1,"Olympian"
+"Poseidon",1,0,"God of Seas, Storms, and Horses",1,"Olympian"
+"Apollo",1,0,"God of Light, Philosophy, Medicine, Truth and the Arts",1,"Olympian"
+"Ares",1,0,"God of War, Violence, and Manly Virtues",1,"Olympian"
+"Hephaestus",1,0,"God of Crafting, Invention, and Fire",1,"Olympian"
+"Hermes",1,0,"God of Travel, Commerce, Thieves, Games, Communication and Diplomacy",1,"Olympian"
+"Dionysus",1,0,"God of Wine, Revelry, Fertility Ecstasy, Madness and Resurrection",1,"Olympian"
+"Hades",1,0,"God of the Underworld, the Dead, and riches under the earth",1,"God of the Underworld"
+"Asclepius",1,0,"God of Medicine and Healing",1,"Olympian"
+"Hera",1,1,"Goddess of Marriage, Women, Childbirth, and Family",1,"Olympian"
+"Demeter",1,1,"Goddess of Fertility, Agriculture, and Nature, and Seasons",1,"Olympian"
+"Athena",1,1,"Goddess of Wisdom, Knowledge, Literature, Science, Defense, and Strategic Warfare",1,"Olympian"
+"Artemis",1,1,"Goddess of Virginity, Birth, Archery, the Moon, Forests, Protection, Animals, the Hunt",1,"Olympian"
+"Aphrodite",1,1,"Goddess of Love, Pleasure, Passion, Beauty, Desire, Procreation, and Fertility",1,"Olympian"
+"Hestia",1,1,"Goddess of Hearth, Fire, Family, Architecture and the State",1,"Olympian"
+"Persephone",1,1,"Goddess of Spring, Queen of the Underworld",1,"Olympian"
+"Hebe",1,1,"Cupbearer of the Olympians, Goddess of Youth",1,"Olympian"
+"Helios",1,0,"The Sun",1,"Elemental"
+"Selene",1,1,"The Goddess of the Moon",1,"Goddess"
+"Eos",1,1,"Titaness Goddess of Dawn",1,"Goddess"
+"Astraeus",1,0,"Titan God of Dusk",1,"God"
+"Pallas",1,0,"Titan God of Warcraft",1,"Titan"
+"Perses",1,0,"Titan God of Destruction",1,"Titan"
+"Leto",1,1,"Goddess of Womanly Demure and Motherhood, Mother of Apollo and Artemis",1,"Goddess"
+"Asteria",1,1,,"Titaness Goddess of Nocturnal Oracles and Falling Stars",1,"Titaness"
+"Atlas",1,0,"Titan condemned to hold up the Sky",1,"Titan"
+"Menoetius",1,0,"Titan killed by Zeus in the Titanomachy",1,"Titan"
+"Prometheus"1,0,"Titan who created mankind, and stole fire from Olympus to give it to man",1,"Titan"
+"Epimetheus"1,0,"Titan of Hindsight, thought to be the antithesis of his clever brother, Prometheus",1,"Titan"
+"Hecate",1,1,"Goddess of Magic, Necromancy, Poison, Herbs Crossroads and Light",1,"Goddess"
+"Hypnos",2,0,"God of Sleep",1,"Post-Primordial"
+"Geras",2,0,"God of Old Age",1,"Post-Primordial"
+"Maia",4,1,"Eldest of the Pleiades",1,"Pliade"
+"Charon",4,0,"Ferryman for the river Styx, ferried souls to the underworld",1,"Gatekeeper"
