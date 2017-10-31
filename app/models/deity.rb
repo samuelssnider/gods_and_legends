@@ -2,8 +2,8 @@ class Deity < ApplicationRecord
   validates :name, :tier, :mythology, presence: true
   
   has_many :child_births, foreign_key: :parent_id, class_name: "Birth" 
-  has_many :children, through: :child_births, source: :follower
-  has_many :parent_births, foreign_key: :follower_id, class_name: "Birth"    
+  has_many :children, through: :child_births, source: :child
+  has_many :parent_births, foreign_key: :child_id, class_name: "Birth"    
   has_many :parents, through: :parent_births, source: :parent
   
   
