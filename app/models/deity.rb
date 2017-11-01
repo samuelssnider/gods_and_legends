@@ -1,5 +1,5 @@
 class Deity < ApplicationRecord
-  validates :name, :tier, :mythology, presence: true
+  validates :name, :tier, presence: true
   
   has_many :child_births, foreign_key: :parent_id, class_name: "Birth" 
   has_many :children, through: :child_births, source: :child
@@ -11,5 +11,4 @@ class Deity < ApplicationRecord
   
   enum gender:    [:male, :female, :unknown, :hermaphriditic]
   enum tier:      [:founder, :greater_god, :god, :lesser_god, :demi_god]
-  enum mythology: [:norse, :greek]
 end

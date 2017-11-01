@@ -1,4 +1,4 @@
-name,tier,gender,description,mythology,classification
+name,tier,gender,description,mythology_id,classification
 "Achlys",0,1,"Death-mist, Misery and Sadness, preceded even Chaos",1,"Origin"
 "Chaos",0,3,"The first thing that came to be",1,"Origin"
 "Gaia",0,1,"Mother Earth",1,"Primordial"
@@ -61,6 +61,6 @@ name,tier,gender,description,mythology,classification
 "Geras",2,0,"God of Old Age",1,"Post-Primordial"
 "Maia",4,1,"Eldest of the Pleiades",1,"Pliade"
 "Charon",4,0,"Ferryman for the river Styx, ferried souls to the underworld",1,"Gatekeeper"
-"Clotho",4,1,"Fate that spun thread of life",1,"Fate"
+"Clotho",4,1,"Fate that spun thread of life",1,"Fate" 
 "Lachesis",4,1,"Fate that measured the thread of life allotted to each person",1,"Fate"
 "Atropos",4,1,"Fate that cut thread of life, she chose the manner of each person's death as well as when their time had come",1,"Fate"

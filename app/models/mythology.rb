@@ -1,0 +1,2 @@
+class Mythology < ApplicationRecord
+end
