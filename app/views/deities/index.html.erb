@@ -1,14 +1,15 @@
-<div>
-  <h4> All the Gods: </h4>
-    
+<div class='row'>
+  <h2> All the Gods: </h2>
   <ul>
   <% @deities.each do |deity| %>
-  <li><%= deity.name %></li>
-  <li>Tier: <%= deity.tier %> Gender: <%= deity.gender %></li>
-  <li><%= deity.description %></li>
-  <li><%= deity.classification %></li>
-  <li><%= deity.mythology.name %></li>
-  <li><%= image_tag "#{deity.name}.jpeg" %></li>
+  <ui><h5><%= deity.name %></h5></ui>
+  <ui>Tier: <%= deity.tier %> Gender: <%= deity.gender %></ui> <br />
+  <ui><%= deity.description %></ui> <br />
+  <ui><%= deity.classification %></ui> <br />
+  <ui><%= deity.mythology.name %></ui> <br />
+  <div>  
+    <ui><%= image_tag "#{deity.name}.jpeg", height: 200 %></ui>
+  </div>
   
   <% end %>
   </ul>
