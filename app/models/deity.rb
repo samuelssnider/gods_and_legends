@@ -11,5 +11,5 @@ class Deity < ApplicationRecord
   has_many :deities, through: :deity_children
   
   enum gender:    [:male, :female, :unknown, :hermaphriditic]
-  enum tier:      [:founder, :greater_god, :god, :lesser_god, :demi_god]
+  enum tier:      ["Founder", "Greater God", "God", "Lesser God", "Demi-god"]
 end

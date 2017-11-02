@@ -15,7 +15,15 @@
 				<p><%= @deity.description %></p> <br />
 				<p>Gender: <%= @deity.gender %> </p><br />
 				<p>Power-level: <%= @deity.tier %> </p><br />
-        <% @deity
+        <% @deity.parents.each do |parent| %>
+          <% if parent.male? %>
+          <p>Father: <%= parent.name %></p>
+          <% elsif parent.female? %>
+          <p>Mother: <%= parent.name %></p>
+          <% else %>
+          <p>Creator: <%= parent.name %></p>
+          <% end %>
+        <% end %>
 				</div>
 			</div>
 		</div>
