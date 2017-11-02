@@ -1,0 +1,12 @@
+<div class='container'>
+  <div class='row'>
+    <div class='myth'>
+      <h3 class='right-justify'><%= link_to "All Mythologies", mythologies_path %></h3>
+      <h3>Mythology: <span class='double_italic'><%= @mythology.name %></span></h3>
+      <p class='margin-the-left the-italic'><%= @mythology.origin_story %></p>
+    </div>
+    <div class='row-center eighty-percent'>
+      <%= image_tag "#{@mythology.name}.jpeg", class: 'eighty-percent' %>
+    </div>
+  </div>
+</div>
