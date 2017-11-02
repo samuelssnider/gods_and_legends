@@ -1,0 +1,9 @@
+<div class='container'>
+  <div class='row'>
+    <% @mythologies.each do |mythology| %>
+    <div class='myth'>
+      <h3><%= mythology.name %></h3>
+      <p><%= mythology.origin_story %></p>
+    </div>
+  </div>
+</div>
