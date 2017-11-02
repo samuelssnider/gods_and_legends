@@ -5,6 +5,7 @@ class Deity < ApplicationRecord
   has_many :children, through: :child_births, source: :child
   has_many :parent_births, foreign_key: :child_id, class_name: "Birth"    
   has_many :parents, through: :parent_births, source: :parent
+  belongs_to :mythology
   
   
   has_many :deities, through: :deity_children

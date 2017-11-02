@@ -17,9 +17,11 @@ deities.each do |row|
   Deity.create!(row)
 end
 
-births.each do |row|
-  row = row.to_h
-  Birth.create!(row)
+births.each do |birth|
+  birth = birth.to_h
+  parent = Deity.find_by(name: birth[:parent])
+  child = Deity.find_by(name: birth[:child])
+  Birth.create!(parent: parent, child: child)
 end
 
 
