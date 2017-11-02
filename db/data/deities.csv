@@ -8,7 +8,7 @@ name,tier,gender,description,mythology_id,classification
 "Aether",0,0,"Primordial God of Upper Air",1,"Primordial"
 "Hemera",0,1,"Primordial Goddess of the Day",1,"Primordial"
 "Eros",0,0,"God of sexual attraction",1,"Primordial"
-"Erebus",0,3,"Shadow",1,"Primordial"
+"Erebus",0,0,"Shadow",1,"Primordial"
 "Pontus",0,1,"Primordial God of the Sea",1,"Primordial"
 "Thalassa",0,1,"Primordially Goddess of the Sea",1,"Primordial"
 "Ananke",0,1,"Primordial Goddess of Inevitablility, Compulsion, and Necessity",1,"Primordial"

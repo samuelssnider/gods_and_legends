@@ -12,18 +12,22 @@
 			<div class='col-6 card bg-info'>
 				<div class='card-body '>
 				<h2><strong><%= @deity.name %></strong></h2> <br />
-				<p><%= @deity.description %></p> <br />
-				<p>Gender: <%= @deity.gender %> </p><br />
-				<p>Power-level: <%= @deity.tier %> </p><br />
+				<p><%= @deity.description %></p>
+				<p>Gender: <%= @deity.gender %> </p>
+				<p>Power-level: <%= @deity.tier %> </p>
         <% @deity.parents.each do |parent| %>
           <% if parent.male? %>
-          <p>Father: <%= parent.name %></p>
+          <p>Father: <%= link_to parent.name, deity_path(parent) %></p>
           <% elsif parent.female? %>
-          <p>Mother: <%= parent.name %></p>
+          <p>Mother: <%= link_to parent.name, deity_path(parent) %></p>
           <% else %>
-          <p>Creator: <%= parent.name %></p>
+          <p>Creator: <%= link_to parent.name, deity_path(parent) %></p>
           <% end %>
         <% end %>
+        <p>Children:</p>
+        <% @deity.children.each do |child| %>
+          <p> <%= link_to child.name, deity_path(child) %></p>
+        <% end %> 
 				</div>
 			</div>
 		</div>
