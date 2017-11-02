@@ -1,0 +1,15 @@
+<div>
+  <h4> All the Gods: </h4>
+    
+  <ul>
+  <% @deities.each do |deity| %>
+  <li><%= deity.name %></li>
+  <li>Tier: <%= deity.tier %> Gender: <%= deity.gender %></li>
+  <li><%= deity.description %></li>
+  <li><%= deity.classification %></li>
+  <li><%= deity.mythology.name %></li>
+  <li><%= image_tag "#{deity.name}.jpeg" %></li>
+  
+  <% end %>
+  </ul>
+</div>
