@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
   
   def create
-    binding.pry
     user = User.create(user_params)
     if user.save
       flash[:notice] = "Logged in as #{user.username} (email: #{user.email})"
@@ -12,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       flash[:error] = "Unable to login, please try again"
-      redirect_to new_users_path
+      redirect_to new_user_path
     end
   end
 

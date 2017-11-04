@@ -13,7 +13,7 @@ feature "New user can create an account" do
     fill_in "user[username]", with: "test"
     fill_in "user[password]", with: "testing"
 
-    click_on "Submit"
+    click_on "Create User"
 
     expect(current_path).to eq('/')
     expect(page).to have_content "Logged in as test"
