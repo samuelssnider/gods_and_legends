@@ -4,10 +4,10 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.create(user_params)
-    if @user.save
-      flash[:notice] = "Logged in as #{@user.username} (email: #{@user.email})"
-      session[:user] = @user.id
+    user = User.create(user_params)
+    if user.save
+      flash[:notice] = "Logged in as #{user.username} (email: #{user.email})"
+      session[:user_id] = user.id
       redirect_to '/'
     else
       flash[:error] = "Unable to login, please try again"
