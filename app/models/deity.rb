@@ -1,5 +1,6 @@
 class Deity < ApplicationRecord
-  validates :name, :tier, presence: true
+  validates :tier, :gender, :mythology_id, :classification, presence: true
+  validates :name, :description, presence: true, uniqueness: :true
   
   has_many :child_births, foreign_key: :parent_id, class_name: "Birth" 
   has_many :children, through: :child_births, source: :child
