@@ -14,6 +14,7 @@ RSpec.describe Deity, type: :model do
     end
   end
   it {should validate_presence_of(:name) }
+  it {should validate_uniqueness_of(:name) }
   it {should validate_presence_of(:description) }
   it {should validate_presence_of(:tier) }
   it {should validate_presence_of(:gender) }
