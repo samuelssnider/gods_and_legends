@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :deities,     only: [:index, :show]
   resources :mythologies, only: [:index, :show]
   resources :users,       only: [:new, :create, :destroy]
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'sessions#new', as: 'login'
   post '/login', :to => 'sessions#create'
   delete '/logout', :to => 'sessions#destroy'
 end

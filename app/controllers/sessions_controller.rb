@@ -6,12 +6,14 @@ class SessionsController < ApplicationController
     if @user = User.find_by(username: params[:session][:username])
       verify_user
     else
+      flash[:failure] = "Unable to find an account with that username"
       redirect_to login_path
     end
   end
   
   def destroy
     session.clear
+    flash[:notice] = "Successfully logged out"
     redirect_to '/'
   end
   
@@ -19,11 +21,10 @@ class SessionsController < ApplicationController
   private
 
   def verify_user
-    binding.pry
     if @user && @user.authenticate(params[:session][:password])
       login_successful
     else
-      flash[:failure] = "That login was unsuccessful"
+      flash[:failure] = "Your Password is incorrect"
       redirect_to '/login'
     end
   end
@@ -31,7 +32,7 @@ class SessionsController < ApplicationController
   def login_successful
     session[:user_id] = @user.id
     flash[:notice] = "Logged in as #{@user.username}"
-    redirect_to ''
+    redirect_to '/'
   end
 
 end

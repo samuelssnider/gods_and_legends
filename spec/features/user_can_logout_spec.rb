@@ -7,6 +7,7 @@ RSpec.describe "As a visitor I can login and logout" do
    fill_in "session[username]", with: "test"
    fill_in "session[password]", with: "testing"
    click_on "Login"
+   save_and_open_page
    expect(current_path).to eq('/')
    expect(page).to have_content("Logged in as test")
    click_on 'Logout'
