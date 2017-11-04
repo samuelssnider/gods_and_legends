@@ -13,4 +13,10 @@ RSpec.describe Deity, type: :model do
       expect(deity.save).to be true
     end
   end
+  it {should validate_presence_of(:name) }
+  it {should validate_presence_of(:description) }
+  it {should validate_presence_of(:tier) }
+  it {should validate_presence_of(:gender) }
+  it {should validate_presence_of(:classification) }
+  it {should validate_presence_of(:mythology_id) }
 end
