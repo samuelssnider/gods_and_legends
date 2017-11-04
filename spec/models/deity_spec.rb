@@ -12,12 +12,18 @@ RSpec.describe Deity, type: :model do
                            mythology: mythology )
       expect(deity.save).to be true
     end
+    it {should validate_presence_of(:name) }
+    it {should validate_uniqueness_of(:name) }
+    it {should validate_presence_of(:description) }
+    it {should validate_uniqueness_of(:description) }
+    it {should validate_presence_of(:tier) }
+    it {should validate_presence_of(:gender) }
+    it {should validate_presence_of(:classification) }
+    it {should validate_presence_of(:mythology_id) }
   end
-  it {should validate_presence_of(:name) }
-  it {should validate_uniqueness_of(:name) }
-  it {should validate_presence_of(:description) }
-  it {should validate_presence_of(:tier) }
-  it {should validate_presence_of(:gender) }
-  it {should validate_presence_of(:classification) }
-  it {should validate_presence_of(:mythology_id) }
+  
+  describe "Relationships" do
+    it { should have_many(:event_actors) }
+    it { should have_many(:events).through(:event_actors) }
+  end
 end
