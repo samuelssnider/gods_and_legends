@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :mythologies, only: [:index, :show]
   resources :users,       only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
-  get '/logout', to: 'sessions#destroy'
+  post '/login', :to => 'sessions#create'
+  delete '/logout', :to => 'sessions#destroy'
 end
