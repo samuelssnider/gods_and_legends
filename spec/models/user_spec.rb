@@ -18,13 +18,13 @@ RSpec.describe User, type: :model do
     it "is invalid without a email" do
       user = User.create(username: "tester",
                          password: "test"        )
-      expect(user.save).to eq(false)
+      expect(user.save).to be(false)
     end
     
     it "is invalid without a password" do
       user = User.create(username: "tester",
                          email: "test@test.com")
-      expect(user.save).to eq(false)
+      expect(user.save).to be(false)
     end
     
     it "is invalid with a repeat username" do
@@ -34,7 +34,7 @@ RSpec.describe User, type: :model do
       user_2 = User.create(username: "tester",
                            email: "second@test.com",
                            password: "second"        )
-      expect(user_2.save).to eq(false)
+      expect(user_2.save).to be(false)
     end
     
     it "is invalid with a repeat email" do
@@ -44,7 +44,7 @@ RSpec.describe User, type: :model do
       user_2 = User.create(username: "second",
                            email: "test@test.com",
                            password: "second"        )
-      expect(user_2.save).to eq(false)
+      expect(user_2.save).to be(false)
       
     end
     
