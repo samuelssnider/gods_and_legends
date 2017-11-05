@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :deities, only: [:index, :show] do
         get 'mythology', to: 'deities/mythologies#index'
+        get 'events', to: 'deities/events#index'
       end
     end
   end

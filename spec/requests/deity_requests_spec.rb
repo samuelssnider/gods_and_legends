@@ -61,10 +61,10 @@ describe "when i send a get request to api-v1-deities" do
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
     expect(json_deduced.first.count).to eq(5)
-    expect(json_deduced.first["title"]).to eq(event_1.name)
-    expect(json_deduced.first["origin_story"]).to eq(event_1.description)
-    expect(json_deduced.last["title"]).to eq(event_2.name)
-    expect(json_deduced.last["origin_story"]).to eq(event_2.description)
+    expect(json_deduced.first["title"]).to eq(event_1.title)
+    expect(json_deduced.first["description"]).to eq(event_1.description)
+    expect(json_deduced.last["title"]).to eq(event_2.title)
+    expect(json_deduced.last["description"]).to eq(event_2.description)
   end
   
 end
