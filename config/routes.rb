@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         get 'mythology', to: 'deities/mythologies#index'
         get 'events', to: 'deities/events#index'
         get 'parents', to: 'deities/parents#index'
+        get 'children', to: 'deities/children#index'
       end
     end
   end
