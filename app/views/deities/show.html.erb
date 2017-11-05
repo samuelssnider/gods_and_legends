@@ -8,6 +8,9 @@
 		<div class="row text-center">
 			<div class='col-6'>
 				<%= image_tag "#{@deity.name}.jpeg", height: 400  %>
+        <div class='card bg-success top-margin-expand'>
+          <p>Books with <%= "#{@deity.name}" %> in the title --></p>
+        </div>
 			</div>
 			<div class='col-6 card bg-info'>
 				<div class='card-body '>
@@ -30,32 +33,41 @@
         <% end %> 
 				</div>
 			</div>
-      <div class='col-6'>
+      <div class='row'>
 		    <div class='card-body'>
           <table class ="table">
-              <% @deity.find_books_with_title.each do |book| %>
+            <thead>
               <tr>
+                <th></th>
+                <th>Book</th>
+                <th>Authors</th>
+                <th>Publisher</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+              <% @deity.find_books_with_title.each do |book| %>
                 <% if book.image %>
                   <td class='book-image'><%= image_tag book.image %></td>
+                <% else %>
+                  <td></td>
                 <% end %>
-              </tr>
-              <tr>
-                <td class='book-title'>Store link to <%= link_to book.title, book.link %></td>
-              </tr>
-              <tr>
+                <td class='book-title'><%= link_to book.title, book.store_link %></td>
                 <% if book.authors %>
-                <td class='book-author'>Author(s): <% book.authors.each do |author| %>
-                    <%= author %> <br />
-                  <% end %></td>
+                  <td class='book-author'><% book.authors.each do |author| %>
+                     <%= author %> <br />
+                   <% end %> </td>
+                <% else %>
+                    <td></td>
                 <% end %>
-              </tr>
-              <tr>
                 <% if book.publisher %>
-                <td class='book-publisher'>Publisher:<%= book.publisher %></td>
+                <td class='book-publisher'><%= book.publisher %></td>
+                <% else %>
+                  <td></td>
                 <% end %>
-              </tr>
-              
-            <% end %>
+                </tr>
+              <% end %>
+            </tbody>
           </table>
         </div>
 			</div>
