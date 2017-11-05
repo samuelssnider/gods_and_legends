@@ -16,6 +16,9 @@ Rails.application.routes.draw do
         get 'parents', to: 'deities/parents#index'
         get 'children', to: 'deities/children#index'
       end
+      resources :mythologies, only: [:index, :show] do
+        get 'deities', to: 'mythologies/deities#index'
+      end
     end
   end
 end
