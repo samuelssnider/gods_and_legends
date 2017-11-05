@@ -8,10 +8,10 @@
 		<div class="row text-center">
 			<div class='col-6'>
 				<%= image_tag "#{@deity.name}.jpeg", height: 400  %>
-				</div>
+			</div>
 			<div class='col-6 card bg-info'>
 				<div class='card-body '>
-				<h2><strong><%= @deity.name %></strong></h2> <br />
+				<h2><strong><%= @deity.name %></strong></h2>
 				<p><%= @deity.description %></p>
 				<p>Gender: <%= @deity.gender %> </p>
 				<p>Power-level: <%= @deity.tier %> </p>
@@ -29,6 +29,35 @@
           <p> <%= link_to child.name, deity_path(child) %></p>
         <% end %> 
 				</div>
+			</div>
+      <div class='col-6'>
+		    <div class='card-body'>
+          <table class ="table">
+              <% @deity.find_books_with_title.each do |book| %>
+              <tr>
+                <% if book.image %>
+                  <td class='book-image'><%= image_tag book.image %></td>
+                <% end %>
+              </tr>
+              <tr>
+                <td class='book-title'>Store link to <%= link_to book.title, book.link %></td>
+              </tr>
+              <tr>
+                <% if book.authors %>
+                <td class='book-author'>Author(s): <% book.authors.each do |author| %>
+                    <%= author %> <br />
+                  <% end %></td>
+                <% end %>
+              </tr>
+              <tr>
+                <% if book.publisher %>
+                <td class='book-publisher'>Publisher:<%= book.publisher %></td>
+                <% end %>
+              </tr>
+              
+            <% end %>
+          </table>
+        </div>
 			</div>
 		</div>
 	</div>

@@ -16,11 +16,8 @@ class Deity < ApplicationRecord
   enum gender:    [:male, :female, :unknown, :hermaphriditic]
   enum tier:      ["Founder", "Greater God", "God", "Lesser God", "Demi-god"]
   
-  def find_books
-    conn = Faraday.new(url: "https://www.googleapis.com/books/v1/volumes?q=intitle:zeus&maxResults=10&api_key=#{ENV['google_api_key']}") do |faraday|
-      faraday.apapter Faraday.default_adapter
-    end
-    raw_stores = JSON.parse(conn.get.body, symbolize_names: true)
-    binding.pry
+  def find_books_with_title(number = 5)
+    BookSearch.find_books_with_title(self.name, number)
   end
+  
 end
