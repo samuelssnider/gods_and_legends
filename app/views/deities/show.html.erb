@@ -44,9 +44,8 @@
                 <th>Publisher</th>
               </tr>
             </thead>
-            
             <tbody>
-              <% @deity.find_books_with_title.each do |book| %>
+              <% @deity.find_books_with_subject.each do |book| %>
                 <% if book.image %>
                   <td class='book-image'><%= image_tag book.image %></td>
                 <% else %>
