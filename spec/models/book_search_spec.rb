@@ -9,6 +9,7 @@ describe BookSearch, type: :service do
         response = 0
         response = bs.get_url(hash)
         return_value = JSON.parse(response.get.body)
+        expect(response).to have_http_status(200)
         expect(return_value["totalItems"]).to eq(0)
       end
     end
@@ -19,6 +20,7 @@ describe BookSearch, type: :service do
         response = 0
         response = bs.get_url(hash)
         return_value = JSON.parse(response.get.body)
+        expect(response).to have_http_status(200)
         expect(return_value["totalItems"]).to eq(500)
       end
     end
