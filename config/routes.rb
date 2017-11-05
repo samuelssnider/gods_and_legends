@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :deities, only: [:index, :show]
+      resources :deities, only: [:index, :show] do
+        get 'mythology', to: 'deities/mythologies#index'
+      end
     end
   end
 end

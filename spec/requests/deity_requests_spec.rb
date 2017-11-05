@@ -39,14 +39,14 @@ describe "when i send a get request to api-v1-deities" do
     mythology = Mythology.first
     expect(deity_1.mythology).to eq(mythology)
     
-    get '/api/v1/deities/1/mythology'
+    get "/api/v1/deities/#{deity_1.id}/mythology"
     
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
-    expect(json_deduced.count).to eq(4)
+    expect(json_deduced.count).to eq(5)
     expect(json_deduced["name"]).to eq(mythology.name)
-    expect(json_deduced["origin_story"]).to eq(mythology.description)
+    expect(json_deduced["origin_story"]).to eq(mythology.origin_story)
   end
   
   it "should be able to return a deity's events" do
@@ -54,13 +54,13 @@ describe "when i send a get request to api-v1-deities" do
     events = create_list(:event, 10, deities: [deity])
     event_1 = Event.first
     event_2 = Event.last
-    get '/api/v1/deities/1/events'
+    get "/api/v1/deities/#{deity.id}/events"
     
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
-    expect(json_deduced.first.count).to eq(4)
+    expect(json_deduced.first.count).to eq(5)
     expect(json_deduced.first["title"]).to eq(event_1.name)
     expect(json_deduced.first["origin_story"]).to eq(event_1.description)
     expect(json_deduced.last["title"]).to eq(event_2.name)
