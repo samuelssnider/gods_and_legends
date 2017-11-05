@@ -67,4 +67,26 @@ describe "when i send a get request to api-v1-deities" do
     expect(json_deduced.last["description"]).to eq(event_2.description)
   end
   
+  it "should find a deity's parents" do
+    deities = create_list(:deity, 2)
+    deity_1 = Deity.first
+    deity_2 = Deity.last
+    deity_child = create(:deity)
+    deity_child.parents << [deity_1, deity_2]
+    
+    get "/api/v1/deities/#{deity_child.id}/parents"
+    
+    json_deduced = JSON.parse(response.body)
+    
+    expect(response).to have_http_status(200)
+    expect(json_deduced.count).to eq(2)
+    expect(json_deduced.first.count).to eq(9)
+    expect(json_deduced.first["name"]).to eq(deity_1.name)
+    expect(json_deduced.first["description"]).to eq(deity_1.description)
+    expect(json_deduced.last["name"]).to eq(deity_2.name)
+    expect(json_deduced.last["description"]).to eq(deity_2.description)
+  end
+  
+  
+  
 end

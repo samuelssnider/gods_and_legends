@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :deities, only: [:index, :show] do
         get 'mythology', to: 'deities/mythologies#index'
         get 'events', to: 'deities/events#index'
+        get 'parents', to: 'deities/parents#index'
       end
     end
   end
