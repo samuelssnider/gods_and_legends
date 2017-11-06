@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'faraday'
 gem 'webmock'
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do
