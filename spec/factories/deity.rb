@@ -7,6 +7,6 @@ FactoryBot.define do
     tier tier_random
     gender gender_random
     classification Faker::Lovecraft.unique.words(1)
-    mythology_id { FactoryGirl.create(:mythology).id }
+    mythology_id { FactoryBot.create(:mythology).id }
   end
 end

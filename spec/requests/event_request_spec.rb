@@ -44,7 +44,6 @@ describe "when i send a get request to api-v1-events" do
     get "/api/v1/events/#{event.id}/deities"
     
     json_deduced = JSON.parse(response.body)
-    binding.pry
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(5)
     expect(json_deduced.first.count).to eq(9)
