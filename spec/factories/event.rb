@@ -9,6 +9,6 @@ FactoryGirl.define do
   factory :event do
     sequence(:title){|n| Faker::WorldOfWarcraft.unique.quote << n }
     sequence(:description){|n| Faker::Lovecraft.unique.sentence << n }
-    deities {actors}
+    deities {actors.map {|actor| actor}}
   end
 end

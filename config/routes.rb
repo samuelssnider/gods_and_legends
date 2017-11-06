@@ -19,6 +19,9 @@ Rails.application.routes.draw do
       resources :mythologies, only: [:index, :show] do
         get 'deities', to: 'mythologies/deities#index'
       end
+      resources :events, only: [:index, :show] do
+        get 'deities', to: 'events/deities#index'
+      end
     end
   end
 end
