@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   tier_random = rand(0..4)
   gender_random = rand(0..3)
   factory :deity do

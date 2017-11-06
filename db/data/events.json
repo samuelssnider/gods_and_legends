@@ -21,6 +21,54 @@
         "name": "Uranus"
       }
     ]
+  },
+  {
+    "eventTitle": "Birth of the Titans",
+    "eventDescription": "From Gaia and Uranus, the Titans, who ruled the domains of the Earth for untold Eons.",
+    "eventActors": [
+      {
+        "name": "Gaia"
+      },
+      {
+        "name": "Uranus"
+      },
+      {
+        "name": "Coeus"
+      },
+      {
+        "name": "Crius"
+      },
+      {
+        "name": "Cronus"
+      },
+      {
+        "name": "Hyperion"
+      },
+      {
+        "name": "Iapetus"
+      },
+      {
+        "name": "Oceanus"
+      },
+      {
+        "name": "Mnemosyne"
+      },
+      {
+        "name": "Phoebe"
+      },
+      {
+        "name": "Rhea"
+      },
+      {
+        "name": "Theia"
+      },
+      {
+        "name": "Themis"
+      },
+      {
+        "name": "Tethys"
+      }
+    ]
   }
 ]
     

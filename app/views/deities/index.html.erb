@@ -10,8 +10,7 @@
           <div class="card border-white text-center" style="width: 17rem;">
             <div class = "card-body">  
               <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
-              <!-- <ui>Tier: <%= deity.tier %> Gender: <%= deity.gender %></ui> <br /> -->
-              <div>  
+              <div>
                 <ui><%= image_tag "#{deity.name}.jpeg", height: 200 %></ui>
               </div>
               <li class='my-small'><%= deity.description %></li> <br />

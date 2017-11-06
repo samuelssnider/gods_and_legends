@@ -24,4 +24,6 @@ Rails.application.routes.draw do
       end
     end
   end
+  
+  get "mythologies/:name/deities"          => "mythologies/deities#index"
 end

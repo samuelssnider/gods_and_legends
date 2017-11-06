@@ -1,0 +1,25 @@
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+</head>
+<div class='container'>
+  <h3 class='right-justify'><%= link_to "All Mythologies", mythologies_path %></h3>
+  <h2> All the Gods: </h2>
+  <div class='row'>
+    <% @deities.each do |deity| %>
+      <div class='center-block'>
+          <div class="card border-white text-center" style="width: 17rem;">
+            <div class = "card-body">  
+              <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
+              <ui>Tier: <%= deity.tier %> Gender: <%= deity.gender %></ui> <br />
+              <div>
+                <ui><%= image_tag "#{deity.name}.jpeg", height: 200 %></ui>
+              </div>
+              <li class='my-small'><%= deity.description %></li> <br />
+              <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
+              <ui><%= deity.classification %></ui> <br />
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

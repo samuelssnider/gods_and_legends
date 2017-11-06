@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :mythology do
     sequence :name do |i|
       "Myth#{i}"

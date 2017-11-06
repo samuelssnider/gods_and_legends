@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   deities_random = rand(1..5)
   actors = []
   unless Deity.all.count == 0
