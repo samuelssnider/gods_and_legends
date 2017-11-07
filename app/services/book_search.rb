@@ -22,8 +22,10 @@ class BookSearch
   
   def find_books_with_subject(parameters)
     raw_books = parse_results(get_url(parameters))
-    raw_books[:items].map do |raw_book|
-      Book.new(raw_book)
+    unless raw_books[:totalItems] == 0
+      raw_books[:items].map do |raw_book|
+        Book.new(raw_book)
+      end
     end
   end
     
