@@ -11,7 +11,7 @@
             <div class = "card-body">  
               <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
               <div>
-                <ui><%= image_tag "#{deity.name}.jpeg", height: 200 %></ui>
+                <ui><%= image_tag asset_path("#{deity.name}.jpeg"), height: 200 %></ui>
               </div>
               <li class='my-small'><%= deity.description %></li> <br />
               <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
