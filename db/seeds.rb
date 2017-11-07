@@ -18,6 +18,7 @@ deities.each do |row|
   row[:tier] = row[:tier].to_i
   row[:gender] = row[:gender].to_i
   row[:mythology_id] = row[:mythology_id].to_i
+  row[:image] = "#{row[:name]}.jpg"
   Deity.create!(row)
 end
 
