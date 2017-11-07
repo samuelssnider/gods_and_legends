@@ -21,6 +21,7 @@ gem 'rspec-rails'
 gem 'faraday'
 gem 'webmock'
 gem 'rails_12factor', group: :production
+gem 'webpacker', '~> 3.0'
 
 
 group :development, :test do
@@ -39,7 +40,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'pry'
   gem 'launchy'
 end
 
