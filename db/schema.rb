@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107211253) do
+ActiveRecord::Schema.define(version: 20171108194616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(version: 20171107211253) do
     t.bigint "mythology_id"
     t.string "image"
     t.index ["mythology_id"], name: "index_deities_on_mythology_id"
+  end
+
+  create_table "deity_domains", force: :cascade do |t|
+    t.bigint "deity_id"
+    t.bigint "domain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deity_id"], name: "index_deity_domains_on_deity_id"
+    t.index ["domain_id"], name: "index_deity_domains_on_domain_id"
+  end
+
+  create_table "domains", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "event_actors", force: :cascade do |t|
@@ -65,6 +80,8 @@ ActiveRecord::Schema.define(version: 20171107211253) do
   end
 
   add_foreign_key "deities", "mythologies"
+  add_foreign_key "deity_domains", "deities"
+  add_foreign_key "deity_domains", "domains"
   add_foreign_key "event_actors", "deities"
   add_foreign_key "event_actors", "events"
 end

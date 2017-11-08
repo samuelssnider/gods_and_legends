@@ -8,6 +8,9 @@ class Deity < ApplicationRecord
   has_many :parents, through: :parent_births, source: :parent
   has_many :event_actors
   has_many :events, through: :event_actors
+  has_many :deity_domains
+  has_many :domains, through: :deity_domains
+  
   belongs_to :mythology
   
   
