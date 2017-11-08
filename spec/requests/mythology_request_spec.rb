@@ -12,7 +12,7 @@ describe "when i send a get request to api-v1-mythologies" do
     
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
-    expect(json_deduced.first.count).to eq(5)
+    expect(json_deduced.first.count).to eq(6)
     expect(json_deduced.first["name"]).to eq(mythology_1.name)
     expect(json_deduced.first["origin_story"]).to eq(mythology_1.origin_story)
     expect(json_deduced.last["name"]).to eq(mythology_2.name)
@@ -28,7 +28,7 @@ describe "when i send a get request to api-v1-mythologies" do
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
-    expect(json_deduced.count).to eq(5)
+    expect(json_deduced.count).to eq(6)
     expect(json_deduced["name"]).to eq(mythology_1.name)
     expect(json_deduced["origin_story"]).to eq(mythology_1.origin_story)
   end

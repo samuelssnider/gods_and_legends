@@ -44,7 +44,7 @@ describe "when i send a get request to api-v1-deities" do
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
-    expect(json_deduced.count).to eq(5)
+    expect(json_deduced.count).to eq(6)
     expect(json_deduced["name"]).to eq(mythology.name)
     expect(json_deduced["origin_story"]).to eq(mythology.origin_story)
   end
