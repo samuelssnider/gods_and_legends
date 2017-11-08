@@ -1,20 +1,26 @@
 class BookSearch
   
   def parse_results(conn)
-    JSON.parse(conn.get.body, symbolize_names: true)
+    JSON.parse(conn.body, symbolize_names: true)
+  end
+  
+  
+  # def base_url
+  #   @conn = "https://www.googleapis.com/books/v1/volumes"
+  # end
+  
+  def simple_params(parameters)
+    conn_params = ""
+    conn_params << "intitle:#{parameters[:title].parameterize}" if parameters[:title]
+    conn_params << "&subject:#{parameters[:subject]}" if parameters[:subject]
+    conn_params << "&max_results=#{parameters[:number]}"
   end
   
   
   def get_url(parameters)
-    conn = Faraday.new(url: "https://www.googleapis.com/books/v1/volumes") do |faraday|
-      faraday.adapter Faraday.default_adapter
-      faraday.headers["api_key"] = ENV['google_api_key']
-      faraday.params["q"] = "intitle:#{parameters[:title]}" if parameters[:title]
-      faraday.params["maxResults"] = parameters[:number] if parameters[:number]
-      faraday.params.merge!("q": "subject:#{parameters[:subject]}") if parameters[:subject]
-    end
+    conn_params = simple_params(parameters)
+    Faraday.get("https://www.googleapis.com/books/v1/volumes?q=#{conn_params}")
   end
-  
   
   def self.find_books_with_subject(parameters)
     BookSearch.new.find_books_with_subject(parameters)
