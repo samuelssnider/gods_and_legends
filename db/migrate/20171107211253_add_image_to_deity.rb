@@ -1,5 +1,5 @@
 class AddImageToDeity < ActiveRecord::Migration[5.1]
   def change
-    add_column :deities, :image, :string, default: "#{deity.name}.jpg"
+    add_column :deities, :image, :string
   end
 end

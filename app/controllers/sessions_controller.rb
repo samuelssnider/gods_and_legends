@@ -32,7 +32,6 @@ class SessionsController < ApplicationController
   def login_successful
     session[:user_id] = @user.id
     flash[:notice] = "Logged in as #{@user.username}"
-    binding.pry
     redirect_to '/'
   end
 

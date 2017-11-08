@@ -46,7 +46,7 @@ describe "when i send a get request to api-v1-events" do
     json_deduced = JSON.parse(response.body)
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(5)
-    expect(json_deduced.first.count).to eq(9)
+    expect(json_deduced.first.count).to eq(10)
     expect(json_deduced.first["name"]).to eq(deity_1.name)
     expect(json_deduced.first["description"]).to eq(deity_1.description)
     expect(json_deduced.last["name"]).to eq(deity_2.name)
