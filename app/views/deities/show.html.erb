@@ -7,7 +7,7 @@
 	<h4 class='btn btn-default'>Back to: <%= link_to " All Deities", deities_path %></h4>
 		<div class="row text-center">
 			<div class='col-6'>
-				<%= image_tag @deity.name, height: 400  %>
+				<%= image_tag @deity.image, height: 400  %>
         <div class='card bg-success top-margin-expand'>
           <p>Books with <%= "#{@deity.name}" %> in the title --></p>
         </div>
