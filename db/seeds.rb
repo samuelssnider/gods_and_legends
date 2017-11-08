@@ -9,8 +9,8 @@ greek = "The greeks did not believe that the Gods Created the universe; they bel
 
 norse = "In the beginning there was only the silent, dark abyss: Ginnungagap. The abyss lay between the land of elemental fire, Muspelheim, and the land of elemental ice, Nifheim. The proximity of these two volitile lands gave way to a steamy mist, which refroze in the abyss to become Ymir, first of the giants. Ymir was hermaphriditic and could thus reproduce a-sexually. From his sweat, more giants were born. Audhumbla, a cow was the next to emerge from Ymir's perspiration. She licked Ymir and revealed Buri, first of what would become know as the Æsir, or principal pantheon of the Norse. Buri has a son Bor, who married Bestla (who desended from the giant Bolthorn). The half-god, half-giant sons of Bor and Bestla Odin, Vili, and Ve. Odin was frightened that the giants were always producing more giants by sweating. Fearful that they would become impossibly outnumbered,Odin and his two brothers slew Ymir and constructed the world from his corpse. The bloodshed from destroying Ymir lef the giants all but extinct, leaving just the Bergelmir and his wife living. The Oceans and Rivers came from his blood, the soil from his skin and muscles, the flora from his hair. His brains formed the clouds, and his skull the sky- which was held aloft by four dwarves. His eyelashes became Midgard, the eventual home of humans. The Gods formed the humans, Ask and Embla, from two tree trunks, and build a fence around their realm, Midgard, to protect them from giants. A man nameed Mundilfari had two beautiful children; his son he named Mani, 'Moon', his daughter Sol, 'Sun'. The Gods were enraged by this, and put the in the sky, and each ride in a chariot in the sky."
 
-Mythology.create(name: "Greek", origin_story: greek)
-Mythology.create(name: "Norse", origin_story: norse)
+Mythology.create(name: "Greek", origin_story: greek, image: "Greek.jpg")
+Mythology.create(name: "Norse", origin_story: norse, image: "Norse.jgp")
 
 
 deities.each do |row|
