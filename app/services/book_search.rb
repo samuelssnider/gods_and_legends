@@ -9,11 +9,11 @@ class BookSearch
   #   @conn = "https://www.googleapis.com/books/v1/volumes"
   # end
   
-  def simple_params(parameters)
+  def simple_params(input)
     conn_params = ""
-    conn_params << "intitle:#{parameters[:title].parameterize}" if parameters[:title]
-    conn_params << "&subject:#{parameters[:subject]}" if parameters[:subject]
-    conn_params << "&max_results=#{parameters[:number]}"
+    conn_params << "intitle:#{input[:title].parameterize}" if input[:title]
+    conn_params << "&subject:#{input[:subject]}" if input[:subject]
+    conn_params << "&max_results=#{input[:number]}"
   end
   
   
