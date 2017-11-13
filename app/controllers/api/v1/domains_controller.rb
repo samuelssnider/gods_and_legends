@@ -15,7 +15,7 @@ module Api
         if @domain.save
           render json: @domain, status: :created
         else
-          render @domain.errors, status: :unprocessable_entity
+          render json: @domain
         end
       end
     
