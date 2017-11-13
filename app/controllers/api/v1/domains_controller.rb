@@ -27,6 +27,12 @@ module Api
           render  body: "Unable to update domain- make sure it has a name, and that name is unique."
         end
       end
+      
+      def destroy
+        @domain =  Domain.find(params[:id]) 
+        render json: @domain.destroy
+        end
+      end
         
     
     
