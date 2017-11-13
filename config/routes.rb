@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       resources :events, only: [:index, :show] do
         get 'deities', to: 'events/deities#index'
       end
+      resources :domains, only: [:index, :show] do
+      end
     end
   end
   

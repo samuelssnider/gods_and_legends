@@ -22,6 +22,7 @@ gem 'faraday'
 gem 'webmock'
 gem 'rails_12factor', group: :production
 gem 'webpacker', '~> 3.0'
+gem 'simplecov', :require => false, :group => :test
 
 
 group :development, :test do
