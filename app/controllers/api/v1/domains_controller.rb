@@ -15,9 +15,19 @@ module Api
         if @domain.save
           render json: @domain, status: :created
         else
-          render json: @domain
+          render  body: "Unable to create domain- make sure it has a name, and that name is unique."
         end
       end
+      
+      def update
+        @domain = Domain.find(params[:id])
+        if @domain.update(domain_params)
+          render json: @domain, status: :updated
+        else
+          render  body: "Unable to update domain- make sure it has a name, and that name is unique."
+        end
+      end
+        
     
     
       private
