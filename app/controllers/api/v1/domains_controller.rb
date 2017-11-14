@@ -24,21 +24,18 @@ module Api
         if @domain.update(domain_params)
           render json: @domain, status: :updated
         else
-          render  body: "Unable to update domain- make sure it has a name, and that name is unique."
+          render  status: "Unable to update domain- make sure it has a name, and that name is unique."
         end
       end
       
       def destroy
         @domain =  Domain.find(params[:id]) 
         render json: @domain.destroy
-        end
       end
-        
-    
     
       private
         def domain_params
-          params.permit(:name)
+          params.permit(:name, :id)
         end
     end
   end
