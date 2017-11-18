@@ -22,9 +22,9 @@ module Api
       def update
         @domain = Domain.find(params[:id])
         if @domain.update!(domain_params)
-          render json: @domain, status: :updated
+          head :no_content
         else
-          render  status: "Unable to update domain- make sure it has a name, and that name is unique."
+          render status: "Unable to update domain- make sure it has a name, and that name is unique."
         end
       end
       
