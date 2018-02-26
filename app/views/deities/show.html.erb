@@ -27,10 +27,12 @@
           <p>Creator: <%= link_to parent.name, deity_path(parent) %></p>
           <% end %>
         <% end %>
+        <% unless @deity.children.empty? %>
         <p>Children:</p>
-        <% @deity.children.each do |child| %>
-          <p> <%= link_to child.name, deity_path(child) %></p>
-        <% end %> 
+            <% @deity.children.each do |child| %>
+              <p> <%= link_to child.name, deity_path(child) %></p>
+            <% end %> 
+        <% end %>
 				</div>
 			</div>
       <div class='row width-fill-page'>
