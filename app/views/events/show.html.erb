@@ -2,19 +2,21 @@
   <h3 class='right-justify'><%= link_to "All Myths", events_path %></h3>
   <h2>  <%=  @event.title %> </h2>
   <h3 class='my-small'> <%= @event.description %> </h3>
-  <% @event.deities.each do |deity| %>
-    <div class='center-block'>
-        <div class="card border-white text-center" style="width: 17rem;">
-          <div class = "card-body">  
-            <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
-            <div>
-              <ui><%= image_tag deity.image, height: 200 %></ui>
+  <div class ='row'>
+    <% @event.deities.each do |deity| %>
+      <div class='center-block'>
+          <div class="card border-white text-center" style="width: 17rem;">
+            <div class = "card-body">  
+              <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
+              <div>
+                <ui><%= image_tag deity.image, height: 200 %></ui>
+              </div>
+              <li class='my-small'><%= deity.description %></li> <br />
+              <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
+              <ui><%= deity.classification %></ui> <br />
             </div>
-            <li class='my-small'><%= deity.description %></li> <br />
-            <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
-            <ui><%= deity.classification %></ui> <br />
           </div>
         </div>
-      </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
