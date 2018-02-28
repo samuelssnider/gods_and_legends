@@ -1,9 +1,9 @@
 class EventsController < ApplicationController
   def index
-    @events = Deity.all
+    @events = Event.all
   end
   
   def show
-    @event = Deity.find(params[:id])
+    @event = Event.find(params[:id])
   end
 end
