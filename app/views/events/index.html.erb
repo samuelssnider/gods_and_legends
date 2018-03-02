@@ -7,6 +7,7 @@
           <div class="card border-white text-center" style="width: 17rem;">
             <div class = "card-body">  
               <ui><h5><%= link_to event.title, event_path(event) %></h5></ui>
+              <ui class='my-small'>(<%= Mythology.find(event.mythology_id).name %>)</ui> <br />
               <li class='my-small'><%= event.description %></li> <br />
             </div>
           </div>
