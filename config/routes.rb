@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :deities,     only: [:index, :show]
   resources :mythologies, only: [:index, :show]
   resources :events,      only: [:index, :show]
+  resources :domains,     only: [:index, :show]
   resources :users,       only: [:new, :create, :destroy]
   
   get '/login', to: 'sessions#new', as: 'login'
