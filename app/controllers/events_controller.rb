@@ -5,5 +5,6 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @mythology = Mythology.find(@event.mythology_id)
   end
 end
