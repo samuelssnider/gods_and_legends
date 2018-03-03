@@ -8,7 +8,8 @@
       {
         "name": "Gaia"
       }
-    ]
+    ],
+    "mythology_id" : 1
   },
   {
     "eventTitle": "Creation of Uranus",
@@ -20,7 +21,8 @@
       {
         "name": "Uranus"
       }
-    ]
+    ],
+    "mythology_id" : 1
   },
   {
     "eventTitle": "Birth of the Titans",
@@ -68,7 +70,8 @@
       {
         "name": "Tethys"
       }
-    ]
+    ],
+    "mythology_id" : 1
   }
 ]
     

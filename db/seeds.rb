@@ -34,7 +34,8 @@ events.each do |event|
   event = event.to_h
   Event.create!(title:       event[:eventTitle],
                description: event[:eventDescription],
-               deities:     event[:eventActors].map {|actor| Deity.find_by(name: actor[:name])}
+               deities:     event[:eventActors].map {|actor| Deity.find_by(name: actor[:name])},
+               mythology_id:   event[:mythology_id]
               )
 end
 
