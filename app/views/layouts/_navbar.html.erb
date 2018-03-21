@@ -1,4 +1,10 @@
 <nav class="navbar navbar-light bg-primary">
-    <%= button_to "Homepage", root_path, :class => 'button hp-button', :method => :get %>
-    <button class='nav-bar-dropdown' name='dd-nav-button'id='dropdown-nav'>▽ </button>
+  <%= button_to "Homepage", root_path, :class => 'button hp-button', :method => :get %>
+  <button class='nav-bar-dropdown' name='dropbtn'id='dropdown-nav'>▽ 
+    <div id="myDropdown" class="dropdown-content">
+      <a href="/">Homepage</a>
+      <a href="/mytholgies">Deities</a>
+      <a href="/events">Myths</a>
+    </div>
+  </button>
 </nav>
