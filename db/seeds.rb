@@ -46,6 +46,7 @@ domains.each do |domain|
 end
 
 deity_domains.each do |deity_domain|
+  puts deity_domain[:deity] + ' --> ' + deity_domain[:domain]
   deity_domain = deity_domain.to_h
   DeityDomain.create!(deity: Deity.find_by(name: deity_domain[:deity]), domain: Domain.find_by(name: deity_domain[:domain]))
 end
