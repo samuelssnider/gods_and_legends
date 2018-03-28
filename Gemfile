@@ -15,7 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'faraday'
@@ -30,7 +30,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'database_cleaner'
   # gem 'factory_bot_rails', "~> 4.0"
-  gem 'pry'
   gem 'vcr'
   gem 'capybara'
   gem 'shoulda-matchers'
