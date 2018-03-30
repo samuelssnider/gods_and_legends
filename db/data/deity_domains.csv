@@ -22,6 +22,7 @@ Eros,Sexual Attraction
 Erebus,Darkness
 Erebus,Shadow
 Pontus,Sea
+Pontus,Seafaring
 Thalassa,Sea
 Thalassa,Fish
 Ananke,Inevitability
@@ -50,6 +51,7 @@ Themis,Law
 Themis,Order
 Tethys,Fresh Water
 Thanatos,Death
+Zeus,Seafaring
 Zeus,Lightning
 Zeus,Sky
 Zeus,Thunder
@@ -58,6 +60,7 @@ Zeus,Law
 Zeus,Order
 Zeus,Justice
 Zeus,Heavens
+Poseidon,Seafaring
 Poseidon,Sea
 Poseidon,Earthquakes
 Poseidon,Storm
@@ -199,6 +202,7 @@ Fárbauti,Fire
 Ægir,Ocean
 Ægir,Revelry
 Rán,Sea
+Rán,Seafaring
 Rán,Storm
 Himinglæva,Heavens
 Dúfa,Ocean
@@ -219,6 +223,9 @@ Kólga,Waves
 Kólga,Ocean
 Angrboða,Loyalty
 Heimdllr,Foresight
+Heimdllr,Watchfulness
+Heimdllr,Sight
+Heimdllr,Gatekeeper
 Heimdllr,Apocalypse
 Heimdllr,Heavens
 Loki,Trickery
@@ -310,7 +317,7 @@ Njörðr,Sea
 Njörðr,Seafaring
 Njörðr,Wind
 Njörðr,Fishing
-Njörðr,Riches
+Njörðr,Wealth
 Njörðr,Fertility (crops)
 Njörðr,Fishing
 Njörðr,Wealth
