@@ -70,6 +70,7 @@ Apollo,Plague
 Apollo,Medicine
 Apollo,Knowledge
 Apollo,Foresight
+Ares,Battle
 Ares,War
 Ares,Violence
 Hephaestus,Fire
@@ -113,6 +114,7 @@ Demeter,Sacred Law
 Athena,War
 Athena,Artisans
 Athena,Wisdom
+Athena,Military Strategy
 Artemis,Hunt
 Artemis,Forests
 Artemis,Moon
@@ -138,7 +140,7 @@ Astraeus,Dusk
 Pallas,Spring
 Pallas,Witchcraft
 Perses,Destruction
-Leto,Womanly Demure
+Leto,Purity
 Leto,Motherhood
 Asteria,Oracles
 Asteria,Stars
@@ -228,3 +230,43 @@ Sleipnir,Horses
 Hel,Death
 Hel,Afterlife
 Hel,The Underworld
+Fenrir,Strength
+Fenrir,Destruction
+Fenrir,Apocalypse
+Jömungandr,Poison
+Jömungandr,Apocalypse
+Týr,Glory
+Týr,Law
+Týr,Courage
+Mímir,Knowledge
+Mímir,Wisdom
+Bestla,Motherhood
+Auðumbla,Creation
+Búri,Strength
+Borr,Strength
+Odin,Wisdom
+Odin,Healing
+Odin,Royalty
+Odin,Execution
+Odin,Knowledge
+Odin,Battle
+Odin,Sorcery
+Odin,Poetry
+Odin,Alphabet
+Odin,Frenzy
+Vili,Intelligence
+Vé,Sight
+Fjörgynn,Motherhood
+Jörð,Motherhood
+Frigg,Wisdom
+Baldr,Light
+Baldr,Sun
+Baldr,Joy
+Baldr,Purity
+Baldr,Beauty
+Baldr,Foresight
+Nanna,Beauty
+Nanna,Sexual Attraction
+Höðr,Winter
+Höðr,Cold
+Höðr,Darkness
