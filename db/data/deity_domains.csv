@@ -66,6 +66,7 @@ Poseidon,Earthquakes
 Poseidon,Storm
 Poseidon,Soil
 Poseidon,Horses
+Apollo,Sex
 Apollo,Music
 Apollo,Poetry
 Apollo,Art
@@ -91,6 +92,7 @@ Hermes,Travelers
 Hermes,Sports
 Hermes,Athletes
 Hermes,Crossroads
+Dionysus,Alcohol
 Dionysus,Grapes
 Dionysus,Wine
 Dionysus,Theater
@@ -125,6 +127,7 @@ Artemis,Hunt
 Artemis,Forests
 Artemis,Moon
 Artemis,Archery
+Aphrodite,Sex
 Aphrodite,Sexuality
 Aphrodite,Beauty
 Aphrodite,Love
@@ -267,6 +270,8 @@ Odin,Sorcery
 Odin,Poetry
 Odin,Alphabet
 Odin,Frenzy
+Odin,Battle
+Odin,War
 Vili,Intellect
 Vé,Sight
 Fjörgynn,Motherhood
@@ -303,10 +308,13 @@ Thor,Craftsmanship
 Thor,Metals
 Thor,Metalworking
 Thor,Forges
+Thor,War
+Thor,Battle
 Járnsaxa,Motherhood
 Ullr,Archery
 Ullr,Hunt
 Ullr,Battle
+Skaði,Battle
 Skaði,Hunt
 Skaði,Archery
 Skaði,Winter
@@ -323,3 +331,26 @@ Njörðr,Fishing
 Njörðr,Wealth
 Móði,Strength
 Magni,Strength
+Þrúðr,Afterlife
+Þrúðr,Battle
+Þrúðr,Alcohol
+Þrúðr,Ale
+Gerðr,Winter
+Gerðr,Light
+Freyr,Prosperity
+Freyr,Sun
+Freyr,Fertility (birth)
+Freyr,Battle
+Freyr,Royalty
+Freyja,Love
+Freyja,Beauty
+Freyja,Sex
+Freyja,War
+Freyja,Battle
+Freyja,Death
+Freyja,Fate
+Freyja,Destiny
+Freyja,Fertility (birth)
+Freyja,Afterlife
+Freyja,Heavens
+Óðr,Frenzy
