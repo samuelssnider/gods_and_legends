@@ -67,6 +67,7 @@ Apollo,Archery
 Apollo,Plague
 Apollo,Medicine
 Apollo,Knowledge
+Apollo,Foresight
 Ares,War
 Ares,Violence
 Hephaestus,Fire
@@ -81,6 +82,7 @@ Hermes,Thieves
 Hermes,Travelers
 Hermes,Sports
 Hermes,Athletes
+Hermes,Crossroads
 Dionysus,Grapes
 Dionysus,Wine
 Dionysus,Theater
@@ -147,3 +149,39 @@ Prometheus,Fire
 Prometheus,Creation
 Prometheus,Trickery
 Epimetheus,Foolishness
+Clymene,Fame
+Clymene,Infamy
+Hecate,Magic
+Hecate,Crossroads
+Hecate,Ghosts
+Hecate,Necromancy
+Hecate,Sorcery
+Hecate,Light
+Hecate,Medicine
+Hecate,Herbs
+Hecate,Poison
+Hypnos,Sleep
+Geras,Old Age
+Eurybia,Sea
+Maia,Stars
+Charon,The Underworld
+Charon,Gatekeeper
+Charon,Afterlife
+Clotho,Mortality
+Clotho,Oracles
+Clotho,Foresight
+Clotho,Birth
+Clotho,Death
+Clotho,Fate
+Lachesis,Mortality
+Lachesis,Oracles
+Lachesis,Foresight
+Lachesis,Death
+Lachesis,Fate
+Lachesis,Destiny
+Atropos,Mortality
+Atropos,Oracles
+Atropos,Foresight
+Atropos,Death
+Atropos,Fate
+Atropos,Inevitability
