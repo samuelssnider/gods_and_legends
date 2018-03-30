@@ -49,6 +49,7 @@ Themis,Law
 Themis,Order
 Tethys,Fresh Water
 Thanatos,Death
+Zeus,Lightning
 Zeus,Sky
 Zeus,Thunder
 Zeus,Storm
@@ -122,6 +123,7 @@ Artemis,Archery
 Aphrodite,Sexuality
 Aphrodite,Beauty
 Aphrodite,Love
+Aphrodite,Youth
 Hestia,Hearth
 Hestia,Home
 Hestia,State
@@ -224,6 +226,8 @@ Loki,Gender Fluidity
 Svaðilfari,Horses
 Helblindi,Family
 Býleistr,Lightning
+Býleistr,Thunder
+Býleistr,Storm
 Sigyn,Trickery
 Narfi,Night
 Sleipnir,Horses
@@ -254,7 +258,7 @@ Odin,Sorcery
 Odin,Poetry
 Odin,Alphabet
 Odin,Frenzy
-Vili,Intelligence
+Vili,Intellect
 Vé,Sight
 Fjörgynn,Motherhood
 Jörð,Motherhood
@@ -270,3 +274,10 @@ Nanna,Sexual Attraction
 Höðr,Winter
 Höðr,Cold
 Höðr,Darkness
+Bragi,Poetry
+Bragi,Music
+Iðunn,Youth
+Iðunn,Eternal Youth
+Iðunn,Fertility
+Forseti,Justice
+Forseti,Law
