@@ -32,6 +32,7 @@ Chronos,Order
 Chronos,Time
 Coeus,Intellect
 Chronos,Harvest
+Chronos,Fertility (crops)
 Hyperion,Watchfulness
 Hyperion,Wisdom
 Hyperion,Light
@@ -41,7 +42,7 @@ Oceanus,Sea
 Mnemosyne,Memory
 Phoebe,Prophecy
 Phoebe,Oracles
-Rhea,Fertility
+Rhea,Fertility (birth)
 Rhea,Motherhood
 Theia,Sight
 Theia,Sky
@@ -97,8 +98,8 @@ Hades,Afterlife
 Hades,Darkness
 Hades,Death
 Hades,Earth
-Hades,Fertility
-Hades,Riches
+Hades,Fertility (birth)
+Hades,Wealth
 Hades,Mortality
 Hades,Metals
 Asclepius,Medicine
@@ -111,6 +112,7 @@ Hera,Childbirth
 Hera,Family
 Demeter,Agriculture
 Demeter,Harvest
+Demeter,Fertility (crops)
 Demeter,Sacred Law
 Athena,War
 Athena,Artisans
@@ -278,6 +280,39 @@ Bragi,Poetry
 Bragi,Music
 Iðunn,Youth
 Iðunn,Eternal Youth
-Iðunn,Fertility
+Iðunn,Fertility (birth)
 Forseti,Justice
 Forseti,Law
+Sif,Earth
+Sif,Harvest
+Sif,Fertility (crops)
+Sif,Family
+Sif,Fertility (birth)
+Thor,Thunder
+Thor,Lightning
+Thor,Storm
+Thor,Strength
+Thor,Craftsmanship
+Thor,Metals
+Thor,Metalworking
+Thor,Forges
+Járnsaxa,Motherhood
+Ullr,Archery
+Ullr,Hunt
+Ullr,Battle
+Skaði,Hunt
+Skaði,Archery
+Skaði,Winter
+Skaði,Cold
+Skaði,Mountains
+Skaði,Skiing
+Njörðr,Sea
+Njörðr,Seafaring
+Njörðr,Wind
+Njörðr,Fishing
+Njörðr,Riches
+Njörðr,Fertility (crops)
+Njörðr,Fishing
+Njörðr,Wealth
+Móði,Strength
+Magni,Strength
