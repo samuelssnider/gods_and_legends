@@ -23,4 +23,11 @@ class Deity < ApplicationRecord
     BookSearch.find_books_with_subject({title: self.name, number: number})
   end
   
+  def siblings
+    # require pry; binding.pry;
+    parents.map do |parent|
+      Birth.where(parent: parent)
+    end
+  end
+  
 end
