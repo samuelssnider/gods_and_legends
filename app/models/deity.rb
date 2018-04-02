@@ -29,7 +29,7 @@ class Deity < ApplicationRecord
       unless birth.child == self 
         birth.child
       end
-    end
+    end.compact!
   end
   
 end
