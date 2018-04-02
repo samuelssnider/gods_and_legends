@@ -1,0 +1,10 @@
+<div class=' text-center' >
+  <h3><%= @domain.name %></h1>
+  <p> Related Deities: </p>
+  <ul class='deity-list'>
+    <% @domain.deities.each do |deity| %>
+      <ui><%= link_to deity.name, deity_path(deity) %></ui>
+      <br />
+    <% end %>
+  </ul>
+</div>

@@ -14,25 +14,29 @@
 			</div>
 			<div class='col-6 card bg-info'>
 				<div class='card-body '>
-				<h2><strong><%= @deity.name %></strong></h2>
-				<p><%= @deity.description %></p>
-				<p>Gender: <%= @deity.gender %> </p>
-				<p>Power-level: <%= @deity.tier %> </p>
-        <% @deity.parents.each do |parent| %>
-          <% if parent.male? %>
-          <p>Father: <%= link_to parent.name, deity_path(parent) %></p>
-          <% elsif parent.female? %>
-          <p>Mother: <%= link_to parent.name, deity_path(parent) %></p>
-          <% else %>
-          <p>Creator: <%= link_to parent.name, deity_path(parent) %></p>
+  				<h2><strong><%= @deity.name %></strong></h2>
+  				<p><%= @deity.description %></p>
+  				<p>Gender: <%= @deity.gender %> </p>
+  				<p>Power-level: <%= @deity.tier %> </p>
+          <p>Domains: <% @deity.domains.each do |domain| %>
+            <br />
+            <%= link_to domain.name, domain_path(domain)  %>
+          <% end %> </p>
+          <% @deity.parents.each do |parent| %>
+            <% if parent.male? %>
+            <p>Father: <%= link_to parent.name, deity_path(parent) %></p>
+            <% elsif parent.female? %>
+            <p>Mother: <%= link_to parent.name, deity_path(parent) %></p>
+            <% else %>
+            <p>Creator: <%= link_to parent.name, deity_path(parent) %></p>
+            <% end %>
           <% end %>
-        <% end %>
-        <% unless @deity.children.empty? %>
-        <p>Children:</p>
-            <% @deity.children.each do |child| %>
-              <p> <%= link_to child.name, deity_path(child) %></p>
-            <% end %> 
-        <% end %>
+          <% unless @deity.children.empty? %>
+          <p>Children:</p>
+              <% @deity.children.each do |child| %>
+                <p> <%= link_to child.name, deity_path(child) %></p>
+              <% end %> 
+          <% end %>
 				</div>
 			</div>
       <div class='row width-fill-page'>
