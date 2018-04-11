@@ -2,12 +2,12 @@
   <div class='row'>
     <% @mythologies.each do |mythology| %>
     <div class='myth'>
-      <h3 class='right-justify'><%= link_to "All Deities", deities_path %></h3>
       <h3>Mythology: <span class='double_italic'><%= link_to mythology.name, mythology_path(mythology) %></span></h3>
       <p class='margin-the-left the-italic'><%= mythology.origin_story %></p>
     </div>
     <div class='row-center eighty-percent'>
       <%= image_tag mythology.image, class: 'eighty-percent' %>
+      <br />
     </div>
     <% end %>
   </div>
