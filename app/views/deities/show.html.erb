@@ -37,17 +37,21 @@
                 <p> <%= link_to child.name, deity_path(child) %></p>
               <% end %> 
           <% end %>
-          <% unless @deity.siblings.empty? %>
-            <p>Brothers:</p>
-            <% @deity.siblings.each do |sibling| %>
-              <% if sibling.male? %>
-                <p><%= link_to sibling.name, deity_path(sibling) %></p>
+          <% if @deity.siblings %>
+            <% if @deity.siblings.any? {|sibling| sibling.male? } %>
+              <p>Brothers:</p>
+              <% @deity.siblings.each do |sibling| %>
+                <% if sibling.male? %>
+                  <p><%= link_to sibling.name, deity_path(sibling) %></p>
+                <% end %>
               <% end %>
             <% end %>
-            <p>Sisters:</p>
-            <% @deity.siblings.each do |sibling| %>
-              <% if sibling.female? %>
-                <p><%= link_to sibling.name, deity_path(sibling) %></p>
+            <% if @deity.siblings.any? {|sibling| sibling.female? } %>
+              <p>Sisters:</p>
+              <% @deity.siblings.each do |sibling| %>
+                <% if sibling.female? %>
+                  <p><%= link_to sibling.name, deity_path(sibling) %></p>
+                <% end %>
               <% end %>
             <% end %>
           <% end %>

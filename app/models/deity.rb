@@ -24,7 +24,6 @@ class Deity < ApplicationRecord
   end
   
   def siblings
-    # require pry; binding.pry;
     Birth.where(parent: parents.first).map do |birth|
       unless birth.child == self 
         birth.child
