@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 20180302001037) do
   create_table "births", force: :cascade do |t|
     t.integer "parent_id"
     t.integer "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "deities", force: :cascade do |t|
