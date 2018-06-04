@@ -39,6 +39,7 @@ class Deity < ApplicationRecord
         parent_two_siblings.include?(sibling)
       end
     end
+    parent_one_siblings
   end
   
 end
