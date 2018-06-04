@@ -24,11 +24,22 @@ class Deity < ApplicationRecord
   end
   
   def siblings
-    Birth.where(parent: parents.first).map do |birth|
+    parent_one_siblings = Birth.where(parent: parents.first).map do |birth|
       unless birth.child == self 
         birth.child
       end
     end.compact!
+    if parents.second
+      parent_two_siblings = Birth.where(parent: parents.second).map do |birth|
+        unless birth.child == self 
+          birth.child
+        end
+      end.compact!
+      full_siblings = parent_one_siblings.select do |sibling|
+        parent_two_siblings.include?(sibling)
+      end
+    end
+    parent_one_siblings
   end
   
 end
