@@ -3,19 +3,19 @@
     <%= link_to image_tag("Deities.png"), deities_path %>
   </div>
   <div class='mythologies-pointer'>
-    <%= link_to "Mythologies", mythologies_path %>
+    <%= link_to image_tag("Mythologies.png"), mythologies_path %>
   </div>
   <div class='myths-pointer'>
-    <%= link_to "Myths", events_path %>
+    <%= link_to image_tag("Myths.png"), events_path %>
   </div>
   <div class='user-logging-pointer'>
   <% if @user %>
-      <%= link_to "Logout", logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
+      <%= link_to image_tag("Logout.png"), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
-      <%= link_to "Login", login_path %>
+      <%= link_to image_tag("Login.png"), login_path %>
   <% end %>
   </div>
   <div class='api-docs-pointer'>
-    <%= link_to "API Documentation", api_dashboard_path %>
+    <%= link_to image_tag("API-Documentation.png", api_dashboard_path %>
   </div>
 </div>
