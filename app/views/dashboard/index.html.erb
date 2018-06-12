@@ -1,21 +1,21 @@
 <div class='text-center'>  
   <div class='deities-pointer'>
-    <%= link_to image_tag("Deities.png"), deities_path %>
+    <%= link_to image_tag("Deities.jpg", height: '200'), deities_path %>
   </div>
   <div class='mythologies-pointer'>
-    <%= link_to image_tag("Mythologies.png"), mythologies_path %>
+    <%= link_to image_tag("Mythologies.jpg", height: '200'), mythologies_path %>
   </div>
   <div class='myths-pointer'>
-    <%= link_to image_tag("Myths.png"), events_path %>
+    <%= link_to image_tag("Myths.jpg", height: '200'), events_path %>
   </div>
   <div class='user-logging-pointer'>
   <% if @user %>
-      <%= link_to image_tag("Logout.png"), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
+      <%= link_to image_tag("Login.png", height: '200'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
-      <%= link_to image_tag("Login.png"), login_path %>
+      <%= link_to image_tag("Login.png", height: '200'), login_path %>
   <% end %>
   </div>
   <div class='api-docs-pointer'>
-    <%= link_to image_tag("API-Documentation.png", api_dashboard_path %>
+    <%= link_to image_tag("API-Documentation.jpg", height: '200'), api_dashboard_path %>
   </div>
 </div>
