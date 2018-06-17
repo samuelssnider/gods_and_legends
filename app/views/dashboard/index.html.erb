@@ -1,11 +1,57 @@
-<div class='text-center'>  
-  <p><%= link_to "Deities", deities_path %></p>
-  <p><%= link_to "Mythologies", mythologies_path %></p>
-  <p><%= link_to "Myths", events_path %></p>
-  <% if @user %>
-    <p><%= link_to "Logout", logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %></p>
+<div class='container'>
+  
+  <div class ='row'>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <a href='/mythologies'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Mythologies", mythologies_path %>
+          </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+      
+    <div class='center-block'>
+      <div class='card text-center' >
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- <% if @user %>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
-    <p><%= link_to "Login", login_path %></p>
-  <% end %>
-  <p><%= link_to "API Documentation", api_dashboard_path %></p>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), login_path %>
+  <% end %> -->
 </div>
+
