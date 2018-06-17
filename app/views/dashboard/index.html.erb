@@ -3,7 +3,7 @@
   <div class ='row'>
     
     <div class='center-block'>
-      <div class='card text-center' style="height: 17rem;">
+      <div class='card text-center' >
         <a href='/mythologies'>  
           <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
         </a>
@@ -11,10 +11,12 @@
             <%= link_to "Mythologies", mythologies_path %>
           </div>
       </div>
+    </div>
     
-      <div class='card text-center' style="height: 17rem;">
+    <div class='center-block'>
+      <div class='card text-center' >
         <a href='/myths'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+          <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
         </a>
           <div class='card-body'>
             <%= link_to "Myths", events_path %>
@@ -23,16 +25,18 @@
     </div>
     
     <div class='center-block'>
-      <div class='card text-center' style="height: 17rem;">
+      <div class='card text-center' >
         <a href='/myths'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
+          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
         </a>
           <div class='card-body'>
             <%= link_to "Myths", events_path %>
           </div>
       </div>
-    
-      <div class='card text-center' style="height: 17rem;">
+    </div>
+      
+    <div class='center-block'>
+      <div class='card text-center' >
         <a href='/myths'>  
           <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
         </a>
