@@ -1,11 +1,55 @@
-<div class='text-center'>  
-  <%= link_to image_tag("Deities.jpg", class: 'menu-image'), deities_path %>
-  <%= link_to image_tag("Mythologies.jpg", class: 'menu-image'), mythologies_path %>
-  <%= link_to image_tag("Myths.jpg", class: 'menu-image'), events_path %>
-  <% if @user %>
-      <%= link_to image_tag("Login.png", class: 'menu-image the-right'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
+<div class='container'>
+  
+  <div class ='row'>
+    
+    <div class='center-block'>
+      <div class='card text-center' style="height: 17rem;">
+        <a href='/mythologies'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Mythologies", mythologies_path %>
+          </div>
+      </div>
+    
+      <div class='card text-center' style="height: 17rem;">
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' style="height: 17rem;">
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' style="height: 17rem;">
+        <a href='/myths'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Myths", events_path %>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- <% if @user %>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
-      <%= link_to image_tag("Login.png", class: 'menu-image the-right'), login_path %>
-  <% end %>
-  <%= link_to image_tag("API-Documentation.jpg", class: 'menu-image the-right'), api_dashboard_path %>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), login_path %>
+  <% end %> -->
 </div>
+
