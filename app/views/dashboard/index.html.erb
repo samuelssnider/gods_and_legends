@@ -1,21 +1,11 @@
 <div class='text-center'>  
-  <div class='deities-pointer'>
-    <%= link_to image_tag("Deities.jpg", class: 'menu-image'), deities_path %>
-  </div>
-  <div class='mythologies-pointer'>
-    <%= link_to image_tag("Mythologies.jpg", class: 'menu-image'), mythologies_path %>
-  </div>
-  <div class='myths-pointer'>
-    <%= link_to image_tag("Myths.jpg", class: 'menu-image'), events_path %>
-  </div>
-  <div class='user-logging-pointer'>
+  <%= link_to image_tag("Deities.jpg", class: 'menu-image'), deities_path %>
+  <%= link_to image_tag("Mythologies.jpg", class: 'menu-image'), mythologies_path %>
+  <%= link_to image_tag("Myths.jpg", class: 'menu-image'), events_path %>
   <% if @user %>
       <%= link_to image_tag("Login.png", class: 'menu-image the-right'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
       <%= link_to image_tag("Login.png", class: 'menu-image the-right'), login_path %>
   <% end %>
-  </div>
-  <div class='api-docs-pointer'>
-    <%= link_to image_tag("API-Documentation.jpg", class: 'menu-image the-right'), api_dashboard_path %>
-  </div>
+  <%= link_to image_tag("API-Documentation.jpg", class: 'menu-image the-right'), api_dashboard_path %>
 </div>
