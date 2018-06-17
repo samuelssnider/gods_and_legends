@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "New user can create an account" do
+xfeature "New user can create an account" do
   scenario "should see a link for create account on root page" do
     visit '/'
     click_on "Login"
