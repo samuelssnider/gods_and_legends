@@ -29,7 +29,6 @@ module Api
       end
       
       def destroy
-        binding.pry
         @domain =  Domain.find_by(name: params["name"]) 
         render json: @domain.destroy
       end
