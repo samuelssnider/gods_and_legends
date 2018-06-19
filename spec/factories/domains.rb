@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :domain do |i|
-    name Faker::Lovecraft.unique.words(1)
+    sequence :name do |i|
+      "Domain#{i}"
+    end
   end
 end
