@@ -25,8 +25,9 @@ Rails.application.routes.draw do
       resources :events, only: [:index, :show] do
         get 'deities', to: 'events/deities#index'
       end
-      resources :domains, only: [:index, :show, :destory]
+      resources :domains, only: [:index, :show]
       post '/domains', to: 'domains#create'
+      delete '/domains', to: 'domains#destroy'
       
     end
   end
