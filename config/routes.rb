@@ -27,7 +27,7 @@ Rails.application.routes.draw do
       end
       resources :domains, only: [:index, :show]
       post '/domains', to: 'domains#create'
-      delete '/domains', to: 'domains#destroy'
+      # delete '/domains', to: 'domains#destroy'
       
     end
   end
