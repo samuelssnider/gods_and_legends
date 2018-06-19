@@ -26,5 +26,19 @@ describe "when i send a get request to api/v1/domains" do
     expect(response).to have_http_status(200)
     expect(json_deduced["name"]).to eq(domain_1.name)
   end
+  it "and namespace with /:domain_id/deities, I should recieve a 200 respose with a single deity related to that domain" do
+    domain = create(:domain)
+    deity  = create(:deity)
+    deity.domains << domain
+    domain = Domain.first
+    
+    get "/api/v1/domains/#{domain.id}/deities"
+    
+    json_deduced = JSON.parse(response.body)
+    
+    expect(response).to have_http_status(200)
+    expect(json_deduced.first["name"]).to eq(deity.name)
+    expect(json_deduced.first["description"]).to eq(deity.description)
+  end
 end
 
