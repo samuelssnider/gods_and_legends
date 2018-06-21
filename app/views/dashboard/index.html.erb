@@ -37,6 +37,16 @@
       
     <div class='center-block'>
       <div class='card text-center' >
+        <a class='domains' href='/domains'>  
+          <img class='home-dashboard-image' src="<%= asset_path('Domains.jpg')%>"/>
+        </a>
+          <div class='card-body'>
+            <%= link_to "Domains",domains_path %>
+          </div>
+      </div>
+    </div>
+    <div class='center-block'>
+      <div class='card text-center' >
         <a class='api-documentation' href='/api/dashboard'>  
           <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
         </a>
