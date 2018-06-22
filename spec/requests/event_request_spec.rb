@@ -13,7 +13,7 @@ describe "when i send a get request to api-v1-events" do
     
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
-    expect(json_deduced.first.count).to eq(5)
+    expect(json_deduced.first.count).to eq(6)
     expect(json_deduced.first["title"]).to eq(event_1.title)
     expect(json_deduced.first["description"]).to eq(event_1.description)
     expect(json_deduced.last["title"]).to eq(event_2.title)
@@ -29,7 +29,7 @@ describe "when i send a get request to api-v1-events" do
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
-    expect(json_deduced.count).to eq(5)
+    expect(json_deduced.count).to eq(6)
     expect(json_deduced["title"]).to eq(event_1.title)
     expect(json_deduced["description"]).to eq(event_1.description)
   end

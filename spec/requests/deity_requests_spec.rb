@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "when i send a get request to api-v1-deities" do
+describe "when i send a get request to api/v1/deities" do
   it "I should recieve a 200 respose with all the deities" do
     deities = create_list(:deity, 10)
     deity_1 = Deity.first
@@ -19,7 +19,7 @@ describe "when i send a get request to api-v1-deities" do
     expect(json_deduced.last["description"]).to eq(deity_2.description)
   end
   
-  it "should receive one deity" do
+  it "should receive one deity when i add a /:deity_id" do
     deities = create_list(:deity, 2)
     deity_1 = Deity.first
     
@@ -33,7 +33,7 @@ describe "when i send a get request to api-v1-deities" do
     expect(json_deduced["description"]).to eq(deity_1.description)
   end
   
-  it "should be able to retreive a deity's mythology" do
+  it "should be able to retreive a deity's mythology namespaced under /:diety_id/mythology" do
     deities = create(:deity)
     deity_1 = Deity.first
     mythology = Mythology.first
@@ -49,7 +49,7 @@ describe "when i send a get request to api-v1-deities" do
     expect(json_deduced["origin_story"]).to eq(mythology.origin_story)
   end
   
-  it "should be able to return a deity's events" do
+  it "should be able to return a deity's events namespaced under /:diety_id/events" do
     deity = create(:deity)
     events = create_list(:event, 10, deities: [deity])
     event_1 = Event.first
@@ -60,14 +60,14 @@ describe "when i send a get request to api-v1-deities" do
     
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
-    expect(json_deduced.first.count).to eq(5)
+    expect(json_deduced.first.count).to eq(6)
     expect(json_deduced.first["title"]).to eq(event_1.title)
     expect(json_deduced.first["description"]).to eq(event_1.description)
     expect(json_deduced.last["title"]).to eq(event_2.title)
     expect(json_deduced.last["description"]).to eq(event_2.description)
   end
   
-  it "should find a deity's parents" do
+  it "should find a deity's parents namespaced under /:diety_id/parents" do
     deities = create_list(:deity, 2)
     deity_1 = Deity.first
     deity_2 = Deity.last
@@ -87,7 +87,7 @@ describe "when i send a get request to api-v1-deities" do
     expect(json_deduced.last["description"]).to eq(deity_2.description)
   end
   
-  it "should find a deity's children" do
+  it "should find a deity's children namespaced under /:diety_id/children" do
     deities = create_list(:deity, 3)
     deity_parent = Deity.first
     deity_child_1 = deities[1]

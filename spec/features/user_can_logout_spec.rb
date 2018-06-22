@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor I can login and logout" do
- it "as a user I can log out" do
+ xit "as a user I can log out" do
    user = User.create(username: "test", email: "testerson@testmail.com", password: "testing")
    visit '/login'
    fill_in "session[username]", with: "test"

@@ -1,11 +1,73 @@
-<div class='text-center'>  
-  <p><%= link_to "Deities", deities_path %></p>
-  <p><%= link_to "Mythologies", mythologies_path %></p>
-  <p><%= link_to "Myths", events_path %></p>
-  <% if @user %>
-    <p><%= link_to "Logout", logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %></p>
+<div class='container'>
+  
+  <div class ='row'>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <div class='card-body'>
+          <a class='mythologies' href='/mythologies'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
+          </a>
+          <br />
+            <%= link_to "Mythologies", mythologies_path %>
+          </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <div class='card-body'>
+          <a class='deities' href='/deities'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
+          </a>
+          <br />
+            <%= link_to "Deities", deities_path %>
+        </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <div class='card-body'>
+          <a class='events' href='/events'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+          </a>
+          <br />
+          <%= link_to "Myths", events_path %>
+        </div>
+      </div>
+    </div>
+      
+    <div class='center-block'>
+      <div class='card text-center' >
+        <div class='card-body'>
+          <a class='domains' href='/domains'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Domains.jpg')%>"/>
+          </a>
+          <br />
+          <%= link_to "Domains",domains_path %>
+        </div>
+      </div>
+    </div>
+    
+    <div class='center-block'>
+      <div class='card text-center' >
+        <div class='card-body'>
+          <a class='api-documentation' href='/api/dashboard'>  
+            <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
+          </a>
+          <br />
+          <%= link_to "API Documentation", api_dashboard_path %>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- <% if @user %>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), logout_path, method: 'delete', :controller=> "sessions", :action=> "destroy" %>
   <% else %>
-    <p><%= link_to "Login", login_path %></p>
-  <% end %>
-  <p><%= link_to "API Documentation", api_dashboard_path %></p>
+  <%= link_to image_tag("Login.png", class: 'login-button-home'), login_path %>
+  <% end %> -->
 </div>
+
