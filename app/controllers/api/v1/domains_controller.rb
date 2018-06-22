@@ -29,7 +29,7 @@ module Api
       end
       
       def destroy
-        @domain =  Domain.find(params[:id]) 
+        @domain =  Domain.find_by(name: params["name"]) 
         render json: @domain.destroy
       end
     

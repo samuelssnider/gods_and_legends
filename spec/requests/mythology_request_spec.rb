@@ -47,8 +47,6 @@ describe "when i send a get request to api-v1-mythologies" do
     expect(response).to have_http_status(200)
     expect(json_deduced.count).to eq(10)
     expect(json_deduced.first.count).to eq(10)
-    expect(json_deduced[2]["name"]).to eq(deity_1.name)
-    expect(json_deduced[2]["description"]).to eq(deity_1.description)
     expect(json_deduced.last["name"]).to eq(deity_2.name)
     expect(json_deduced.last["description"]).to eq(deity_2.description)
   end
