@@ -4,10 +4,11 @@
     
     <div class='center-block'>
       <div class='card text-center' >
-        <a class='mythologies' href='/mythologies'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
-        </a>
-          <div class='card-body'>
+        <div class='card-body'>
+          <a class='mythologies' href='/mythologies'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Mythologies.jpeg')%>"/>
+          </a>
+          <br />
             <%= link_to "Mythologies", mythologies_path %>
           </div>
       </div>
@@ -15,44 +16,49 @@
     
     <div class='center-block'>
       <div class='card text-center' >
-        <a class='deities' href='/deities'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
-        </a>
-          <div class='card-body'>
+        <div class='card-body'>
+          <a class='deities' href='/deities'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Deities.jpeg')%>"/>
+          </a>
+          <br />
             <%= link_to "Deities", deities_path %>
-          </div>
+        </div>
       </div>
     </div>
     
     <div class='center-block'>
       <div class='card text-center' >
-        <a class='events' href='/events'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
-        </a>
-          <div class='card-body'>
-            <%= link_to "Myths", events_path %>
-          </div>
+        <div class='card-body'>
+          <a class='events' href='/events'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Myths.jpeg')%>"/>
+          </a>
+          <br />
+          <%= link_to "Myths", events_path %>
+        </div>
       </div>
     </div>
       
     <div class='center-block'>
       <div class='card text-center' >
-        <a class='domains' href='/domains'>  
-          <img class='home-dashboard-image' src="<%= asset_path('Domains.jpg')%>"/>
-        </a>
-          <div class='card-body'>
-            <%= link_to "Domains",domains_path %>
-          </div>
+        <div class='card-body'>
+          <a class='domains' href='/domains'>  
+            <img class='home-dashboard-image' src="<%= asset_path('Domains.jpg')%>"/>
+          </a>
+          <br />
+          <%= link_to "Domains",domains_path %>
+        </div>
       </div>
     </div>
+    
     <div class='center-block'>
       <div class='card text-center' >
-        <a class='api-documentation' href='/api/dashboard'>  
-          <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
-        </a>
-          <div class='card-body'>
-            <%= link_to "API Documentation", api_dashboard_path %>
-          </div>
+        <div class='card-body'>
+          <a class='api-documentation' href='/api/dashboard'>  
+            <img class='home-dashboard-image' src="<%= asset_path('API-Documentation.jpeg')%>"/>
+          </a>
+          <br />
+          <%= link_to "API Documentation", api_dashboard_path %>
+        </div>
       </div>
     </div>
     
