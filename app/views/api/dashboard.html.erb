@@ -1,24 +1,40 @@
 <p>The API functionality is namespaced under -- api/v1 </p>
-<p>The possible deity endpoints are: </p>
-<ul>
-  <li>/deities               -- all deities</li>
-  <li>/deities/:id           -- a single deity</li>
-  <li>/deities/:id/mythology -- a single deity's mythology</li>
-  <li>/deities/:id/events    -- a single deity's events</li>
-  <li>/deities/:id/children  -- a single deity's children</li>
-  <li>/deities/:id/parents   -- a single deity's parents</li>
-</ul>
+<div>
+  <p>The possible deity endpoints are: </p>
+  <ul>
+    <li>/deities               -- all deities</li>
+    <li>/deities/:id           -- a single deity</li>
+    <li>/deities/:id/mythology -- a single deity's related mythology</li>
+    <li>/deities/:id/events    -- a single deity's events</li>
+    <li>/deities/:id/children  -- a single deity's children</li>
+    <li>/deities/:id/parents   -- a single deity's parents</li>
+    <li>/deities/:id/events    -- a single deity's myths</li>
+  </ul>
+</div>
 
-<p>The possible mythology endpoints are: </p>
-<ul>
-  <li>/mythologies               -- all mythologies</li>
-  <li>/mythologies/:id           -- a single mythology</li>
-  <li>/mythologies/:id/deities   -- a single mythology's deities</li>
-</ul>
+<div>
+  <p>The possible mythology endpoints are: </p>
+  <ul>
+    <li>/mythologies               -- all mythologies</li>
+    <li>/mythologies/:id           -- a single mythology</li>
+    <li>/mythologies/:id/deities   -- a single mythology's related deities</li>
+  </ul>
+</div>
 
-<p>The possible event (myth) endpoints are: </p>
-<ul>
-  <li>/events               -- all events</li>
-  <li>/events/:id           -- a single event</li>
-  <li>/events/:id/deities   -- a single event's deities</li>
-</ul>
+<div>
+  <p>The possible event (myth) endpoints are: </p>
+  <ul>
+    <li>/events               -- all events</li>
+    <li>/events/:id           -- a single event</li>
+    <li>/events/:id/deities   -- a single event's related deities</li>
+  </ul>
+</div>
+
+<div>
+  <p>The possible domains endpoints are: </p>
+  <ul>
+    <li>/domains               -- all domains</li>
+    <li>/domains/:id           -- a single domain</li>
+    <li>/domain/:id/deities   -- a single domain's related deities</li>
+  </ul>
+</div>
