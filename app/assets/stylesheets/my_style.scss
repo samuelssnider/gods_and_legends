@@ -48,22 +48,23 @@
 .deity-list {
   padding-left: 0px
 }
-.deities-pointer {
-
-}
-.mythologies-pointer {
-  
-}
-.myths-pointer {
-  
-}
-.user-logging-pointer {
-  
-}
-.api-docs-pointer {
-  
+.right-margin{
+  margin-right: 0.75em;
 }
 
 .home-dashboard-image{
   height: 165px;
+}
+
+#deities-home-button{
+  color: #b3b3b3
+}
+#domains-home-button{
+  color: #b3b3b3
+}
+#myths-home-button{
+  color: #b3b3b3
+}
+#mythologies-home-button{
+  color: #b3b3b3
 }
