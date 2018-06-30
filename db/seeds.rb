@@ -13,22 +13,23 @@ norse = "In the beginning there was only the silent, dark abyss: Ginnungagap. Th
 
 egyptian = "The world was borne from the infinite lifeless sea, summoned forth my the first rising of the sun. Atum, who created himself, evolved from a single being into multiple elements. Atum gave rise to Shu and Tefnut, the air gods who in turn birthed Geb the earth god and Nut the sky goddess. Together, Geb and Nut defined the limits of the world. Geb and Nut gave birth to four children who represent the forces of life: Osiris, god of fertility and regeneration; Isis, goddess of Motherhood; Set, the god of chaos; and Nephthys, the goddesss of chaos. These nine god came to be known as the Ennead."
 
-Mythology.create(name: "Greek", origin_story: greek, image: "Greek.jpg")
-Mythology.create(name: "Norse", origin_story: norse, image: "Norse.jpg")
-Mythology.create(name: "Egyptian", origin_story: egyptian, image: "Egyptian.jpg")
+Mythology.create(name: "Greek", origin_story: greek, image: "mythologies/Greek.jpg")
+Mythology.create(name: "Norse", origin_story: norse, image: "mythologies/Norse.jpg")
+Mythology.create(name: "Egyptian", origin_story: egyptian, image: "mythologies/Egyptian.jpg")
 
 deities.each do |row|
   row = row.to_h
   row[:tier] = row[:tier].to_i
   row[:gender] = row[:gender].to_i
   row[:mythology_id] = row[:mythology_id].to_i
-  row[:image] = "#{row[:name]}.jpg"
+  row[:image] = "deities/#{row[:name]}.jpg"
+  puts row[:name]
   Deity.create!(row)
 end
 
 births.each do |birth|
   birth = birth.to_h
-  puts "#{birth[:parent]} --> + #{birth[:child]}"
+  puts "#{birth[:parent]} --> #{birth[:child]}"
   parent = Deity.find_by(name: birth[:parent])
   child = Deity.find_by(name: birth[:child])
   Birth.create!(parent: parent, child: child)
