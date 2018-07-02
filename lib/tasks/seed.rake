@@ -18,6 +18,16 @@ namespace :seed do
 
   desc "TODO"
   task myths: :environment do
+    events = JSON.parse(File.read("./db/data/events.json"), symbolize_names: true)
+    events.each do |event|
+      event = event.to_h
+      puts event[:eventTitle]
+      Event.create!(title:       event[:eventTitle],
+                   description: event[:eventDescription],
+                   deities:     event[:eventActors].map {|actor| Deity.find_by(name: actor[:name])},
+                   mythology_id:   event[:mythology_id]
+                  )
+    end
   end
 
   desc "TODO"
@@ -34,16 +44,36 @@ namespace :seed do
     Mythology.all {|mythology| puts mythology.name }
   end
 
-  desc "TODO"
+  desc "Seed Domains"
   task domains: :environment do
+    domains = CSV.foreach "./db/data/domains.csv", headers: true, header_converters: :symbol
+    domains.each do |domain|
+      domain = domain.to_h
+      puts domain[:name]
+      Domain.create!(name: domain[:name])
+    end
   end
 
-  desc "TODO"
+  desc "Seed each deity's domains"
   task deity_domains: :environment do
+    deity_domains = CSV.foreach "./db/data/deity_domains.csv", headers: true, header_converters: :symbol
+    deity_domains.each do |deity_domain|
+      puts "#{deity_domain[:deity]} --> #{deity_domain[:domain]}"
+      deity_domain = deity_domain.to_h
+      DeityDomain.create!(deity: Deity.find_by(name: deity_domain[:deity]), domain: Domain.find_by(name: deity_domain[:domain]))
+    end
   end
-  
-  desc "TODO"
-  task deity_domains: :environment do
+
+  desc "Seed all Births"
+  task births: :environment do
+    births = CSV.foreach "./db/data/begetting.csv", headers: true, header_converters: :symbol
+    births.each do |birth|
+      birth = birth.to_h
+      puts "#{birth[:parent]} --> #{birth[:child]}"
+      parent = Deity.find_by(name: birth[:parent])
+      child = Deity.find_by(name: birth[:child])
+      Birth.create!(parent: parent, child: child)
+    end
   end
 
 end
