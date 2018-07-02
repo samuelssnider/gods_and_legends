@@ -75,5 +75,7 @@ namespace :seed do
       Birth.create!(parent: parent, child: child)
     end
   end
+  
+  task all: [:mythologies, :deities, :domains, :births, :myths, :deity_domains]
 
 end
