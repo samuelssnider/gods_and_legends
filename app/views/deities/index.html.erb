@@ -12,7 +12,7 @@
               <div>
                 <ui><%= image_tag deity.image, height: 200 %></ui>
               </div>
-              <li class='my-small'><%= deity.description %></li> <br />
+              <ui class='my-small'><p><%= deity.description %></p></ui> <br />
               <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
               <ui><%= deity.classification %></ui> <br />
             </div>
