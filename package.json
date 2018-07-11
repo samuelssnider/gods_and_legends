@@ -1,12 +1,8 @@
 {
-  "name": "gods_and_legends",
-  "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.0.2",
-    "coffeescript": "1.12.7"
+    "@rails/webpacker": "^3.5.5"
   },
   "devDependencies": {
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "2.11.2"
   }
 }

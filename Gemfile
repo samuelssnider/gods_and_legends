@@ -22,9 +22,10 @@ gem 'rspec-rails'
 gem 'faraday'
 gem 'webmock'
 gem 'rails_12factor', group: :production
-gem 'webpacker', '~> 3.0'
+gem 'webpacker'
 gem 'simplecov', :require => false, :group => :test
 gem 'rack-cors', :require => 'rack/cors'
+gem 'graphql'
 
 
 group :development, :test do
