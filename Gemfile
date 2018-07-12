@@ -23,6 +23,7 @@ gem 'faraday'
 gem 'webmock'
 gem 'rails_12factor', group: :production
 gem 'webpacker'
+gem 'mini_magick'
 gem 'simplecov', :require => false, :group => :test
 gem 'rack-cors', :require => 'rack/cors'
 
