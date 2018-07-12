@@ -6,7 +6,7 @@
       <div class='card text-center' >
         <div class='card-body'>
           <a class='mythologies' href='/mythologies'>  
-            <img class='home-dashboard-image' src='../assets/menu_options/Mythologies'/>
+            <%= image_tag("/assets/menu_options/Mythologies", class: 'home-dashboard-image') %>
           </a>
           <br />
             <%= link_to "Mythologies", mythologies_path %>
@@ -18,7 +18,7 @@
       <div class='card text-center' >
         <div class='card-body'>
           <a class='deities' href='/deities'>  
-            <img class='home-dashboard-image' src='../assets/menu_options/Deities'/>
+            <%= image_tag("/assets/menu_options/Deities", class: 'home-dashboard-image') %>
           </a>
           <br />
             <%= link_to "Deities", deities_path %>
@@ -30,7 +30,7 @@
       <div class='card text-center' >
         <div class='card-body'>
           <a class='events' href='/events'>  
-            <img class='home-dashboard-image' src='../assets/menu_options/Myths'/>
+            <%= image_tag("/assets/menu_options/Myths", class: 'home-dashboard-image') %>
           </a>
           <br />
           <%= link_to "Myths", events_path %>
@@ -42,7 +42,7 @@
       <div class='card text-center' >
         <div class='card-body'>
           <a class='domains' href='/domains'>  
-            <img class='home-dashboard-image' src='../assets/menu_options/Domains'/>
+            <%= image_tag("/assets/menu_options/Domains", class: 'home-dashboard-image') %>
           </a>
           <br />
           <%= link_to "Domains",domains_path %>
@@ -54,7 +54,7 @@
       <div class='card text-center' >
         <div class='card-body'>
           <a class='api-documentation' href='/api/dashboard'>  
-            <img class='home-dashboard-image' src='../assets/menu_options/API-Documentation'/>
+            <%= image_tag("/assets/menu_options/API-Documentation", class: 'home-dashboard-image') %>
           </a>
           <br />
           <%= link_to "API Documentation", api_dashboard_path %>
