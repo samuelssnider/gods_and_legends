@@ -48,10 +48,9 @@ namespace :seed do
   task domains: :environment do
     domains = CSV.foreach "./db/data/domains.csv", headers: true, header_converters: :symbol
     domains.each do |domain|
-      binding.pry
       domain = domain.to_h
       puts domain[:name]
-      Domain.create!(name: domain[:name], image: MiniMagick::Image.open("domains/#{domain[:name]}.jpg"))
+      Domain.create!(name: domain[:name], image: "domains/#{domain[:name]}.png")
     end
   end
 
