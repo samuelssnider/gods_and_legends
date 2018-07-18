@@ -109,9 +109,17 @@ describe "when i send a get request to api/v1/deities" do
   end
   
   it "should find a deity's domains namespaced under /:diety_id/domains" do
-    domain = create(:domain)
-    deities = create_list(:deity, 5, domains: [domain])
-  
+    domain_1 = create(:domain)
+    domain_2 = create(:domain)
+    domain_3 = create(:domain)
+    deity_1 = create(:deity, domains: [domain_1, domain_2, domain_3])
+    deity_1 = Deity.first
+    
+    get "/api/v1/deities/#{deity_1.id}/domains"
+    
+    json_deduced = JSON.parse(response.body)
+    
+    expect(json_deduced.first["domains"].count).to eq(3)
   end
   
   
