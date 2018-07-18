@@ -57,6 +57,7 @@ describe "when i send a get request to api/v1/domains" do
     json_deduced = JSON.parse(response.body)
     
     expect(response).to have_http_status(200)
+    require 'pry'; binding.pry
     expect(json_deduced.first["name"]).to eq(deity_1.name)
     expect(json_deduced.first["description"]).to eq(deity_1.description)
     expect(json_deduced.last["name"]).to eq(deity_2.name)

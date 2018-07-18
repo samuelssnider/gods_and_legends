@@ -110,7 +110,7 @@ describe "when i send a get request to api/v1/deities" do
   
   it "should find a deity's domains namespaced under /:diety_id/domains" do
     domain = create(:domain)
-    deities = create_list(:deity, 5)
+    deities = create_list(:deity, 5, domains: [domain])
   
   end
   
