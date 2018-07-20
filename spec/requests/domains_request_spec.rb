@@ -45,7 +45,7 @@ describe "when i send a get request to api/v1/domains" do
   
   it "and namespace with /:domain_id/deities, I should recieve a 200 respose with a single deity related to that domain" do
     domain   = create(:domain)
-    deities  = create_list(:deity, 10)
+    deities  = create_list(:deity, 2)
     deity_1  = Deity.first
     deity_2  = Deity.last
     deities.each do |deity|

@@ -1,5 +1,6 @@
 require 'csv'
 require 'json'
+require 'pry'
 
 deities = CSV.foreach "./db/data/deities.csv", headers: true, header_converters: :symbol
 births = CSV.foreach "./db/data/begetting.csv", headers: true, header_converters: :symbol

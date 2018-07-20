@@ -50,7 +50,7 @@ namespace :seed do
     domains.each do |domain|
       domain = domain.to_h
       puts domain[:name]
-      Domain.create!(name: domain[:name])
+      Domain.create!(name: domain[:name], image: "domains/#{domain[:name]}")
     end
   end
 

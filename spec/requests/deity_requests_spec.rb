@@ -108,6 +108,18 @@ describe "when i send a get request to api/v1/deities" do
     expect(json_deduced.last["description"]).to eq(deity_child_2.description)
   end
   
-  
-  
+  it "should find a deity's domains namespaced under /:diety_id/domains" do
+    domain_1 = create(:domain)
+    domain_2 = create(:domain)
+    domain_3 = create(:domain)
+    deity_1 = create(:deity, domains: [domain_1, domain_2, domain_3])
+    
+    get "/api/v1/deities/#{deity_1.id}/domains"
+    
+    json_deduced = JSON.parse(response.body)
+    
+    expect(json_deduced.count).to eq(3)
+    expect(json_deduced.first["name"]).to eq(domain_1.name)
+    expect(json_deduced.last["name"]).to eq(domain_3.name)  
+  end
 end
