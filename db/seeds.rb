@@ -49,7 +49,8 @@ end
 domains.each do |domain|
   domain = domain.to_h
   puts domain[:name]
-  Domain.create!(name: domain[:name])
+  domain[:image] = "deities/#{row[:name]}.jpg"
+  Domain.create!(name: domain[:name], image: "domains/#{domain[:name]}")
 end
 
 deity_domains.each do |deity_domain|
