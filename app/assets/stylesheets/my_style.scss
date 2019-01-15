@@ -75,3 +75,11 @@
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
+
+#nav-btn-list {             /* <- this affects all navbars */
+    display: inline-block;
+}
+
+.nav-item>a {          /* <- this affects just my footer navbar */
+    display: inline-block;
+}
