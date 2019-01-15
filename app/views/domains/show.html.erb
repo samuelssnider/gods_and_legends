@@ -20,8 +20,8 @@
           </tr>
         </thead>
         <tbody>
-          <% unless @deity.find_books_with_subject.nil? %>
-            <% @deity.find_books_with_subject.each do |book| %>
+          <% unless @domain.find_books_with_subject.nil? %>
+            <% @domain.find_books_with_subject.each do |book| %>
               <% if book.image %>
                 <td class='book-image'><%= image_tag book.image %></td>
               <% else %>

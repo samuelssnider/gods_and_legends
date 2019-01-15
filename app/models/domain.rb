@@ -6,6 +6,6 @@ class Domain < ApplicationRecord
   
   
   def find_books_with_subject(number = 5)
-    BookSearch.find_books_with_subject({title: "mythology #{self.name}", number: number})
+    BookSearch.find_books_with_subject({title: self.name, subject: self.name, number: number})
   end
 end
