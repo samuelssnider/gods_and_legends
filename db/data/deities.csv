@@ -123,3 +123,4 @@ name,tier,gender,description,mythology_id,classification
 "Freyr",1,0,"God of Virility, Prosperity and Sunshine. Bringer of peace",2,"God"
 "Freyja",1,1,"Goddess of Love, Sex, Gold, Beauty, Fertility, Gold, War and Death",2,"Goddess"
 "Óðr",1,0,"Freya's husband",2,"God"
+"Aker",0,0,"God of the Earth and The Horizon",3,"God"
