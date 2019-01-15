@@ -7,4 +7,46 @@
       <br />
     <% end %>
   </ul>
+  
+  <div class='row width-fill-page'>
+    <div class='card-body'>
+      <table class ="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Book</th>
+            <th>Authors</th>
+            <th>Publisher</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% unless @deity.find_books_with_subject.nil? %>
+            <% @deity.find_books_with_subject.each do |book| %>
+              <% if book.image %>
+                <td class='book-image'><%= image_tag book.image %></td>
+              <% else %>
+                <td></td>
+              <% end %>
+              <td class='book-title'><%= link_to book.title, book.store_link %></td>
+              <% if book.authors %>
+                <td class='book-author'><% book.authors.each do |author| %>
+                   <%= author %> <br />
+                 <% end %> </td>
+              <% else %>
+                  <td></td>
+              <% end %>
+              <% if book.publisher %>
+              <td class='book-publisher'><%= book.publisher %></td>
+              <% else %>
+                <td></td>
+              <% end %>
+              </tr>
+            <% end %>
+          <% else %>
+              <td>This Mythology has no Books associated with its name</td>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

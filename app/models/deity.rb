@@ -38,8 +38,10 @@ class Deity < ApplicationRecord
       full_siblings = parent_one_siblings.select do |sibling|
         parent_two_siblings.include?(sibling)
       end
+    else
+      full_siblings = parent_one_siblings
     end
-    parent_one_siblings
+    full_siblings
   end
   
 end
