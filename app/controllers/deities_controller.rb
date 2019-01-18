@@ -1,6 +1,10 @@
 class DeitiesController < ApplicationController
   def index
-    @deities = Deity.all
+    unless params["mythology"] 
+      @deities = Deity.all
+    else
+      @deities = Deity.where(mythology: Mythology.find_by(name: params["mythology"]))
+    end
   end
   
   def show
