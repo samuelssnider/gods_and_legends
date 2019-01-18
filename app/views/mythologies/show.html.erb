@@ -1,7 +1,8 @@
 <div class='container'>
   <div class='row'>
     <div class='myth'>
-      <h3>Mythology: <span class='double_italic'><%= @mythology.name %></span></h3>
+      <h3 id='myth-show-head'>Mythology: <span class='double_italic'><%= @mythology.name %></span></h3>
+      <a class="nav-item btn-sm btn-dark float-right right-margin active" href="/deities?mythology=<%= @mythology.name%>"  id='deities-particular-button' role='button'><%= @mythology.name %> Deities</a>
       <p class='margin-the-left the-italic'><%= @mythology.origin_story %></p>
     </div>
     <div class='row-center eighty-percent'>
