@@ -6,12 +6,12 @@
     <% @deities.each do |deity| %>
       <div class='center-block'>
           <div class="card border-white text-center" style="width: 17rem;">
-            <div class = "card-body">  
+            <div class = "card-body card-grey">  
               <ui><h5><%= link_to deity.name, deity_path(deity) %></h5></ui>
               <div>
                 <ui><%= image_tag deity.image, height: 200 %></ui>
               </div>
-              <ui class='my-small'><p><%= deity.description %></p></ui> <br />
+              <ui class='my-small'><p><%= deity.description %></p></ui>
               <ui><%= link_to deity.mythology.name, mythology_path(deity.mythology) %></ui> <br />
               <ui><%= deity.classification %></ui> <br />
             </div>
