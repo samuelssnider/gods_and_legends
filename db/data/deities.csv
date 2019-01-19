@@ -97,7 +97,7 @@ name,tier,gender,description,mythology_id,classification
 "Bestla",1,1,"The mother of Odin, Vili, and Vé by Borr",2,"Goddess"
 "Auðumbla",2,1,"Primeval cow, licked free Búri from Ymir",2,"Bestial God"
 "Búri",1,0,"The first God, father of Borr",2,"God"
-"Borr",1,0,"Husband of Bestla, father of Odin, Vili, and Vé",1,"God"
+"Borr",1,0,"Husband of Bestla, father of Odin, Vili, and Vé",2,"God"
 "Odin",1,1,"Sky Father, master of the domains of healing, death, royalty, knowledge and runes, which he lost an eye to master",2,"Leader of the Æsir"
 "Vili",2,0,"Odin's brother, helped to destroy Ymir, almost exclusively mentioned with his brother Vé",2,"God"
 "Vé",2,0,"Odin's brother, helped to destroy Ymir, almost exclusively mentioned with his brother Vili",2,"God"
